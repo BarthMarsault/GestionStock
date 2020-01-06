@@ -10,6 +10,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         ViewLauncher launcher = new ViewLauncher("sample",NOM_APPLICATION);
         launcher.launch();
+        //ligne inutile
     }
 
 
