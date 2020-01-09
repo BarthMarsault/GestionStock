@@ -1,21 +1,32 @@
+import Model.Utilisateur;
+import Utils.DataStorage;
 import Utils.ViewLauncher;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-import static Utils.Consts.NOM_APPLICATION;
+import java.util.ArrayList;
+
+import static Utils.Consts.APPLICATION_NAME;
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        ViewLauncher launcher = new ViewLauncher("sample",NOM_APPLICATION);
+        ViewLauncher launcher = new ViewLauncher("sample", APPLICATION_NAME);
         launcher.launch();
-        //ligne inutile
     }
 
 
 
     public static void main(String[] args) {
+        DataStorage.deserializeData();
+
+        ArrayList<Utilisateur> u = DataStorage.magasin.getListeUtilisateurs();
+        for(Utilisateur ut : u){
+            System.out.println(ut.toString());
+        }
+
         launch(args);
+        DataStorage.serializeData();
     }
 }
