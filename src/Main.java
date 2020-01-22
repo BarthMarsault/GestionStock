@@ -12,7 +12,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        ViewLauncher launcher = new ViewLauncher("sample", APPLICATION_NAME);
+        ViewLauncher launcher = new ViewLauncher("Accueil", APPLICATION_NAME);
         launcher.launch();
     }
 

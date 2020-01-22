@@ -5,6 +5,7 @@ import Model.*;
 import java.io.*;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.ArrayList;
 
 import static Utils.Consts.*;
 import static Utils.Log.logError;
@@ -94,8 +95,14 @@ public class DataStorage {
 
 
         magasin.addUtilisateur(new Utilisateur(1,"Dupont","Jean","123"));
+        magasin.addUtilisateur(new Utilisateur(2,"Duper","Je suis","123"));
 
+        ArrayList<Article> listeArticles = new ArrayList<>();
+        listeArticles.add(new Article("A123", "Paire de chaussures", 34, "Paire de chaussures super confortable."));
+        listeArticles.add(new Article("G578", "Canne à pêche", 22, "Canne à pêche de compétition."));
+        listeArticles.add(new Article("D13", "Tapis de yoga", 34, "Moelleux et léger il convient parfaitement à tout sportif."));
 
+        magasin.addRayon(new Rayon("Sport",listeArticles));
     }
 
 

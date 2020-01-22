@@ -1,5 +1,6 @@
 package Utils;
 
+import Controller.DetailsArticle;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,6 +13,7 @@ public class ViewLauncher {
     private Parent parent;
     private FXMLLoader fxmlLoader;
     private Stage stage;
+    private DetailsArticle detailsArticle;
 
 
     /**
@@ -57,7 +59,6 @@ public class ViewLauncher {
     }
 
 
-
     public void launch(){
         stage.show();
 
@@ -65,5 +66,17 @@ public class ViewLauncher {
             Stage stage = (Stage) parent.getScene().getWindow();
             stage.close();
         }
+    }
+
+    public DetailsArticle getDetailsArticle() {
+        return detailsArticle;
+    }
+
+    public void setDetailsArticle(DetailsArticle detailsArticle) {
+        this.detailsArticle = detailsArticle;
+    }
+
+    public Object getAController(){
+        return fxmlLoader.getController();
     }
 }

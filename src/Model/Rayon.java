@@ -5,28 +5,30 @@ import java.util.ArrayList;
 
 public class Rayon implements Serializable {
 
-    private int id;
     private String nom;
     private ArrayList<Article> listeArticles;
-
-    public Rayon(int id, String nom, ArrayList<Article> listeArticles) {
-        this.id = id;
-        this.nom = nom;
-        this.listeArticles = listeArticles;
-    }
 
     public Rayon(String nom, ArrayList<Article> listeArticles) {
         this.nom = nom;
         this.listeArticles = listeArticles;
     }
 
-
-    public int getId() {
-        return id;
+    public void addArticle(Article article){
+        if(!listeArticles.contains(article) && article != null){
+            listeArticles.add(article);
+        }
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void updateArticle(Article ancienArticle, Article nouvelArticle){
+        if(!listeArticles.contains(nouvelArticle) && nouvelArticle != null && listeArticles.indexOf(ancienArticle) != -1) {
+            listeArticles.set(listeArticles.indexOf(ancienArticle), nouvelArticle);
+        }
+    }
+
+    public void deleteArticle(Article article){
+        if(listeArticles.contains(article) && article != null) {
+            listeArticles.remove(article);
+        }
     }
 
     public String getNom() {
