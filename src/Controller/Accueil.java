@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 
 import static Utils.Consts.APPLICATION_NAME;
 
-public class Accueil {
+public class Accueil{
 
 
     @FXML

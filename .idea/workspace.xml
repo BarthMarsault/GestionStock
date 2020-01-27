@@ -2,25 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/ConsultationArticles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/CreationArticle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/DetailsArticle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ModificationArticle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/ConsultationArticles.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/CreationArticle.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/DetailsArticle.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/ModificationArticle.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test/testCreationArticle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/FiledFormater.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GestionStock/View/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionStock.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GestionStock.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionStock/View/Accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStock/View/Accueil.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionStock/View/ConsultationArticles.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStock/View/ConsultationArticles.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionStock/View/CreationArticle.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStock/View/CreationArticle.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionStock/View/ModificationArticle.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStock/View/ModificationArticle.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Accueil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ConsultationArticles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ConsultationArticles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CreationArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CreationArticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DetailsArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DetailsArticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ModificationArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ModificationArticle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/Magasin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Magasin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Rayon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Rayon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Utils/DataStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/DataStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/ViewLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/ViewLauncher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/Accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Accueil.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/ConsultationArticles.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ConsultationArticles.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/CreationArticle.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/CreationArticle.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/ModificationArticle.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ModificationArticle.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +103,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="GoToFile.includeJavaFiles" value="false" />
@@ -110,10 +111,14 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="last.edited.regexp" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/View" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -130,7 +135,7 @@
       <recent name="C:\Users\PYL\Documents\GitHub\GestionStock\src\View" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -187,6 +192,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="testCreationArticle.testChampsVides" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GestionStock" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.testCreationArticle" />
+      <option name="METHOD_NAME" value="testChampsVides" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -208,6 +233,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.testCreationArticle.testChampsVides" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -257,15 +287,15 @@
       <screen x="0" y="0" width="1217" height="720" />
     </state>
     <state x="374" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1217.720@0.0.1217.720" timestamp="1579603607500" />
-    <state x="425" y="0" width="458" height="520" key="#com.intellij.ide.util.MemberChooser" timestamp="1579681191148">
+    <state x="425" y="0" width="458" height="520" key="#com.intellij.ide.util.MemberChooser" timestamp="1580120053428">
       <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state x="425" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1217.720@0.0.1217.720" timestamp="1579681191148" />
+    <state x="425" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1217.720@0.0.1217.720" timestamp="1580120053428" />
     <state x="447" y="0" width="458" height="520" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1578565129521" />
-    <state x="339" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579706587031">
+    <state x="339" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579972808739">
       <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state x="339" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1217.720@0.0.1217.720" timestamp="1579706587031" />
+    <state x="339" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1217.720@0.0.1217.720" timestamp="1579972808739" />
     <state x="155" y="0" key="CommitChangelistDialog2" timestamp="1578565734626">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -275,39 +305,63 @@
     </state>
     <state x="401" y="88" key="FileChooserDialogImpl/0.0.1217.720@0.0.1217.720" timestamp="1578568352226" />
     <state x="422" y="83" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1578411404661" />
-    <state width="1173" height="46" key="GridCell.Tab.0.bottom" timestamp="1579709496010">
+    <state width="1173" height="220" key="GridCell.Tab.0.bottom" timestamp="1580129363578">
       <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state width="1173" height="46" key="GridCell.Tab.0.bottom/0.0.1217.720@0.0.1217.720" timestamp="1579709496010" />
+    <state width="1173" height="220" key="GridCell.Tab.0.bottom/0.0.1217.720@0.0.1217.720" timestamp="1580129363578" />
     <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1578565734673" />
-    <state width="1173" height="46" key="GridCell.Tab.0.center" timestamp="1579709496010">
+    <state width="1173" height="220" key="GridCell.Tab.0.center" timestamp="1580129363578">
       <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state width="1173" height="46" key="GridCell.Tab.0.center/0.0.1217.720@0.0.1217.720" timestamp="1579709496010" />
+    <state width="1173" height="220" key="GridCell.Tab.0.center/0.0.1217.720@0.0.1217.720" timestamp="1580129363578" />
     <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1578565734673" />
-    <state width="1173" height="46" key="GridCell.Tab.0.left" timestamp="1579709496010">
+    <state width="1173" height="220" key="GridCell.Tab.0.left" timestamp="1580129363577">
       <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state width="1173" height="46" key="GridCell.Tab.0.left/0.0.1217.720@0.0.1217.720" timestamp="1579709496010" />
+    <state width="1173" height="220" key="GridCell.Tab.0.left/0.0.1217.720@0.0.1217.720" timestamp="1580129363577" />
     <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1578565734673" />
-    <state width="1173" height="46" key="GridCell.Tab.0.right" timestamp="1579709496010">
+    <state width="1173" height="220" key="GridCell.Tab.0.right" timestamp="1580129363578">
       <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state width="1173" height="46" key="GridCell.Tab.0.right/0.0.1217.720@0.0.1217.720" timestamp="1579709496010" />
+    <state width="1173" height="220" key="GridCell.Tab.0.right/0.0.1217.720@0.0.1217.720" timestamp="1580129363578" />
     <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1578565734673" />
-    <state x="116" y="0" key="SettingsEditor" timestamp="1579600629825">
+    <state width="1173" height="220" key="GridCell.Tab.1.bottom" timestamp="1580129363579">
       <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state x="116" y="0" key="SettingsEditor/0.0.1217.720@0.0.1217.720" timestamp="1579600629825" />
+    <state width="1173" height="220" key="GridCell.Tab.1.bottom/0.0.1217.720@0.0.1217.720" timestamp="1580129363579" />
+    <state width="1173" height="220" key="GridCell.Tab.1.center" timestamp="1580129363579">
+      <screen x="0" y="0" width="1217" height="720" />
+    </state>
+    <state width="1173" height="220" key="GridCell.Tab.1.center/0.0.1217.720@0.0.1217.720" timestamp="1580129363579" />
+    <state width="1173" height="220" key="GridCell.Tab.1.left" timestamp="1580129363578">
+      <screen x="0" y="0" width="1217" height="720" />
+    </state>
+    <state width="1173" height="220" key="GridCell.Tab.1.left/0.0.1217.720@0.0.1217.720" timestamp="1580129363578" />
+    <state width="1173" height="220" key="GridCell.Tab.1.right" timestamp="1580129363579">
+      <screen x="0" y="0" width="1217" height="720" />
+    </state>
+    <state width="1173" height="220" key="GridCell.Tab.1.right/0.0.1217.720@0.0.1217.720" timestamp="1580129363579" />
+    <state x="116" y="0" key="SettingsEditor" timestamp="1579969961863">
+      <screen x="0" y="0" width="1217" height="720" />
+    </state>
+    <state x="116" y="0" key="SettingsEditor/0.0.1217.720@0.0.1217.720" timestamp="1579969961863" />
     <state x="122" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1578321715066" />
     <state x="339" y="167" key="com.intellij.ide.util.TipDialog" timestamp="1578562676154">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="339" y="167" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1578562676154" />
+    <state x="344" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1580119382047">
+      <screen x="0" y="0" width="1217" height="720" />
+    </state>
+    <state x="344" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1217.720@0.0.1217.720" timestamp="1580119382047" />
     <state x="75" y="44" key="new project wizard" timestamp="1578411415478">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="75" y="44" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1578411415478" />
+    <state x="265" y="161" key="run.anything.popup" timestamp="1579969802692">
+      <screen x="0" y="0" width="1217" height="720" />
+    </state>
+    <state x="265" y="161" key="run.anything.popup/0.0.1217.720@0.0.1217.720" timestamp="1579969802692" />
     <state x="271" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1579602169287">
       <screen x="0" y="0" width="1217" height="720" />
     </state>

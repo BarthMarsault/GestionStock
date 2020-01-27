@@ -11,32 +11,23 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.util.Callback;
-
-import javax.swing.*;
-import javax.swing.text.TabableView;
-import javax.swing.text.View;
 import java.util.ArrayList;
 
 import static Utils.Consts.APPLICATION_NAME;
 
 public class ConsultationArticles {
 
-    @FXML
-    private TableView<Article> articleTableView;
-    @FXML
-    private TableColumn<Article, String> refArticleColumn;
-    @FXML
-    private TableColumn<Article, String> nomArticleColumn;
-    @FXML
-    private TableColumn<Article, String> qteArticleColumn;
-    @FXML
-    private TableColumn<Article, Void> detailsArticleColumn;
-    @FXML
-    private TableColumn<Article, Void> modificationArticleColumn;
-    @FXML
-    private TableColumn<Article, Void> suppressionArticleColumn;
+    @FXML private AnchorPane consultationAnchor;
+    @FXML private TableView<Article> articleTableView;
+    @FXML private TableColumn<Article, String> refArticleColumn;
+    @FXML private TableColumn<Article, String> nomArticleColumn;
+    @FXML private TableColumn<Article, String> qteArticleColumn;
+    @FXML private TableColumn<Article, String> rayonArticleColumn;
+    @FXML private TableColumn<Article, Void> detailsArticleColumn;
+    @FXML private TableColumn<Article, Void> modificationArticleColumn;
+    @FXML private TableColumn<Article, Void> suppressionArticleColumn;
 
     ObservableList<Article> data = FXCollections.observableArrayList();
 
@@ -50,6 +41,7 @@ public class ConsultationArticles {
         refArticleColumn.setCellValueFactory(cellData->new SimpleStringProperty(cellData.getValue().getReference()));
         nomArticleColumn.setCellValueFactory(cellData->new SimpleStringProperty(cellData.getValue().getNom()));
         qteArticleColumn.setCellValueFactory(cellData->new SimpleStringProperty(Integer.toString(cellData.getValue().getQte())));
+        rayonArticleColumn.setCellValueFactory(cellData->new SimpleStringProperty(DataStorage.magasin.getRayonFromArticle(cellData.getValue()).getNom()));
 
         Callback<TableColumn<Article, Void>, TableCell<Article, Void>> detailsCellFactory = new Callback<TableColumn<Article, Void>, TableCell<Article, Void>>() {
             @Override
@@ -62,9 +54,9 @@ public class ConsultationArticles {
                     {
                         detailsBtn.setOnAction((ActionEvent event) -> {
                             Article article = getTableView().getItems().get(getIndex());
-                            ViewLauncher launcher = new ViewLauncher("DetailsArticle", APPLICATION_NAME);
+                            ViewLauncher launcher = new ViewLauncher(consultationAnchor,"DetailsArticle", APPLICATION_NAME);
                             DetailsArticle detailsArticle = (DetailsArticle) launcher.getAController();
-                            detailsArticle.setArticle(article);
+                            detailsArticle.passArticle(article);
                             launcher.launch();
                         });
                     }
@@ -94,9 +86,9 @@ public class ConsultationArticles {
                     {
                         modificationBtn.setOnAction((ActionEvent event) -> {
                             Article article = getTableView().getItems().get(getIndex());
-                            ViewLauncher launcher = new ViewLauncher("ModificationArticle", APPLICATION_NAME);
+                            ViewLauncher launcher = new ViewLauncher(consultationAnchor,"ModificationArticle", APPLICATION_NAME);
                             ModificationArticle modificationArticle = (ModificationArticle) launcher.getAController();
-                            modificationArticle.setArticle(article);
+                            modificationArticle.passArticle(article);
                             launcher.launch();
                         });
                     }

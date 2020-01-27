@@ -34,13 +34,25 @@ public class Magasin implements Serializable {
 
     public Rayon getRayonFromArticle(Article article){
         for(Rayon r : listeRayons){
-            for(Article ar : r.getListeArticles())
-                if(article.equals(ar))
+            for(Article ar : r.getListeArticles()) {
+                if (article.equals(ar)){
                     return r;
+                }
+            }
         }
         return null;
     }
 
+    public Article getArticleFromReference(String reference){
+        for(Rayon r : listeRayons){
+            for(Article ar : r.getListeArticles())
+                if(reference.equals(ar.getReference()))
+                    return ar;
+        }
+        return null;
+    }
+
+    //Fonction de débug pour observer les articles du magasins
     public void affichageArticleParRayon(){
         for(Rayon rayon : listeRayons){
             System.out.println(">"+rayon.getNom());

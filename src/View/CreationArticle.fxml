@@ -29,6 +29,7 @@
                   <Insets right="10.0" />
                </GridPane.margin>
             </Label>
+            <TextField fx:id="refArticleTxtField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label text="Rayon" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets right="10.0" />
@@ -49,7 +50,6 @@
             <Button mnemonicParsing="false" onAction="#creationArticle" text="Valider" GridPane.columnIndex="2" GridPane.rowIndex="6" />
             <ComboBox fx:id="rayonArticleComboBox" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label fx:id="msgInformation" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
-            <TextField fx:id="refArticleTxtField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label text="Référence" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets right="10.0" />

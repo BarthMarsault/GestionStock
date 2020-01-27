@@ -3,30 +3,26 @@ package Controller;
 import Model.Article;
 import Model.Rayon;
 import Utils.DataStorage;
+import Utils.FiledFormater;
+import Utils.ViewLauncher;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
+import static Utils.Consts.APPLICATION_NAME;
+
 public class ModificationArticle {
 
-    @FXML
-    private TextField nomArticleTxtField;
-    @FXML
-    private TextField refArticleTxtField;
-    @FXML
-    private TextField qteArticleTxtField;
-    @FXML
-    private ComboBox<String> rayonArticleComboBox;
-    @FXML
-    private TextArea descArticleTxtArea;
-
-    @FXML
-    private Label msgInformation;
+    @FXML private TextField nomArticleTxtField;
+    @FXML private TextField refArticleTxtField;
+    @FXML private TextField qteArticleTxtField;
+    @FXML private ComboBox<String> rayonArticleComboBox;
+    @FXML private TextArea descArticleTxtArea;
+    @FXML private Button validerBtn;
+    @FXML private Label msgInformation;
 
     private Article ancienArticle;
 
@@ -40,36 +36,40 @@ public class ModificationArticle {
         }
         rayonArticleComboBox.getItems().addAll(listeNomRayon);
         msgInformation.setVisible(false);
-        //Ajouter regex
 
     }
 
-    public void setArticle(Article article){
-        if(article != null){
+    public void passArticle(Article article){
+        if(article != null) {
             ancienArticle = article;
             nomArticleTxtField.setText(article.getNom());
             refArticleTxtField.setText(article.getReference());
             qteArticleTxtField.setText(Integer.toString(article.getQte()));
             descArticleTxtArea.setText(article.getDescription());
-
             rayonArticleComboBox.setValue(DataStorage.magasin.getRayonFromArticle(article).getNom());
-
+            FiledFormater.noSpecialCharacters(nomArticleTxtField);
+            FiledFormater.noSpecialCharacters(refArticleTxtField);
+            FiledFormater.onlyNumbers(qteArticleTxtField);
         }
-        else
-            System.out.println("Pas bon");
     }
 
     public void modificationArticle(){
-
-        System.out.println(rayonArticleComboBox.getValue());
         if(!nomArticleTxtField.getText().equals("") && !refArticleTxtField.getText().equals("") && !qteArticleTxtField.getText().equals("") && rayonArticleComboBox.getValue() != null){
-            for (Rayon rayon : DataStorage.magasin.getListeRayons()) {
-                if (rayon.getNom().equals(rayonArticleComboBox.getValue())) {
-                    rayon.updateArticle(ancienArticle, new Article(refArticleTxtField.getText(),nomArticleTxtField.getText(), Integer.parseInt(qteArticleTxtField.getText()), descArticleTxtArea.getText()));
-                    msgInformation.setVisible(true);
-                    msgInformation.setTextFill(Color.web("#63a32e"));
-                    msgInformation.setText("Article modifié");
+            if (ancienArticle.getReference().equals(refArticleTxtField.getText()) || DataStorage.magasin.getArticleFromReference(refArticleTxtField.getText()) == null) {
+                for (Rayon rayon : DataStorage.magasin.getListeRayons()) {
+                    if (rayon.getNom().equals(rayonArticleComboBox.getValue())) {
+                        rayon.updateArticle(ancienArticle, new Article(refArticleTxtField.getText(), nomArticleTxtField.getText(), Integer.parseInt(qteArticleTxtField.getText()), descArticleTxtArea.getText()));
+                        Stage stage = (Stage) validerBtn.getScene().getWindow();
+                        stage.close();
+                        ViewLauncher launcher = new ViewLauncher("ConsultationArticles",APPLICATION_NAME);
+                        launcher.launch();
+                    }
                 }
+            }
+            else{
+                msgInformation.setVisible(true);
+                msgInformation.setTextFill(Color.web("#ce0a0a"));
+                msgInformation.setText("Référence déjà existante.");
             }
         }
         else{

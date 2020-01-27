@@ -93,18 +93,23 @@ public class DataStorage {
     public static void stub(){
         magasin = new Magasin();
 
-
+        //Ajout d'utilisateurs
         magasin.addUtilisateur(new Utilisateur(1,"Dupont","Jean","123"));
         magasin.addUtilisateur(new Utilisateur(2,"Duper","Je suis","123"));
 
+        //Ajout de rayons
         ArrayList<Article> listeArticles = new ArrayList<>();
         listeArticles.add(new Article("A123", "Paire de chaussures", 34, "Paire de chaussures super confortable."));
         listeArticles.add(new Article("G578", "Canne à pêche", 22, "Canne à pêche de compétition."));
         listeArticles.add(new Article("D13", "Tapis de yoga", 34, "Moelleux et léger il convient parfaitement à tout sportif."));
-
         magasin.addRayon(new Rayon("Sport",listeArticles));
+        ArrayList<Article> listeArticles2 = new ArrayList<>();
+        listeArticles2.add(new Article("U907", "Cuissard d'hiver", 34, "Cuissard de compétition."));
+        listeArticles2.add(new Article("I508", "Casque bleu", 22, "Pour une protection en toute classe."));
+        listeArticles2.add(new Article("F313", "Roue 20 pouces", 34, "Une roue qui se dégonfle en un mois d'utilisation."));
+        magasin.addRayon(new Rayon("Cyclotourisme",listeArticles2));
+
+
     }
-
-
 
 }
