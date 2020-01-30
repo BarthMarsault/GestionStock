@@ -12,12 +12,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.util.Callback;
 import java.util.ArrayList;
 
 import static Utils.Consts.APPLICATION_NAME;
 
 public class ConsultationArticles {
+
 
     @FXML private AnchorPane consultationAnchor;
     @FXML private TableView<Article> articleTableView;
