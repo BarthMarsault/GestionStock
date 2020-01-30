@@ -2,6 +2,8 @@ package Model;
 
 import java.io.Serializable;
 
+import static Utils.DataStorage.magasin;
+
 public class Utilisateur implements Serializable {
 
     private int id;
@@ -16,22 +18,27 @@ public class Utilisateur implements Serializable {
         this.nom = nom;
         this.prenom = prenom;
         this.mdp = mdp;
+
     }
 
     public Utilisateur(String nom, String prenom, String mdp) {
+        this.id = generationIdentifiant();
         this.nom = nom;
         this.prenom = prenom;
         this.mdp = mdp;
     }
 
+
+
     @Override
     public String toString() {
-        return "Utilisateur{" +
-                "id=" + id +
-                ", nom='" + nom + '\'' +
-                ", prenom='" + prenom + '\'' +
-                ", mdp='" + mdp + '\'' +
-                '}';
+        return prenom + " " + nom;
+    }
+
+
+
+    public int generationIdentifiant(){
+        return  (int) (Math.random() * (999999 - 1000));
     }
 
     public int getId() {

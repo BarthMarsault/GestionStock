@@ -23,3 +23,5 @@
 hs_err_pid*
 /logError.txt
 /data.ser
+/.idea/workspace.xml
+/out/

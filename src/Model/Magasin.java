@@ -18,6 +18,19 @@ public class Magasin implements Serializable {
         this.listeRayons = listeRayons;
     }
 
+    /***
+     * Revoi l'utilisateur posèdant l'id passé en paramètre
+     * @param id int identifiant de l'utilisateur recherché
+     * @return  Utilisateur ou null
+     */
+    public Utilisateur getUtilisateurById(int id){
+        for (Utilisateur utilisateur : listeUtilisateurs) {
+            if (utilisateur.getId() == id) {
+                return utilisateur;
+            }
+        }
+        return null;
+    }
 
     public void addUtilisateur(Utilisateur utilisateur){
         if(!listeUtilisateurs.contains(utilisateur) && utilisateur != null){

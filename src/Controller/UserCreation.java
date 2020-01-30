@@ -1,8 +1,5 @@
 package Controller;
 
-import Model.Utilisateur;
-import ModelDAO.UtilisateurDAO;
-import Utils.Consts;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -32,7 +29,7 @@ public class UserCreation extends MenuBar{
 
         if (!NomTxtField.getText().equals("") && !PrenomTxtField.getText().equals("") && (!MailTxtField.getText().equals("") && MailTxtField.getText().indexOf("@") > 0  && MailTxtField.getText().indexOf(".") > 0 ) && !MdpTxtField.getText().equals(""))
         {
-            succeed = UtilisateurDAO.createUtilisateur(NomTxtField.getText(), PrenomTxtField.getText(), MailTxtField.getText(), MdpTxtField.getText());
+            //succeed = UtilisateurDAO.createUtilisateur(NomTxtField.getText(), PrenomTxtField.getText(), MailTxtField.getText(), MdpTxtField.getText());
             if(succeed != 1)
                 echecCreation.setText("Impossible de créer le compte");
             else backHome();

@@ -1,7 +1,10 @@
 package Utils;
 
 import Model.*;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 
+import java.awt.font.ImageGraphicAttribute;
 import java.io.*;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -96,6 +99,8 @@ public class DataStorage {
         //Ajout d'utilisateurs
         magasin.addUtilisateur(new Utilisateur(1,"Dupont","Jean","123"));
         magasin.addUtilisateur(new Utilisateur(2,"Duper","Je suis","123"));
+
+        magasin.addUtilisateur(new Administrateur(10,"admin","admin","123"));
 
         //Ajout de rayons
         ArrayList<Article> listeArticles = new ArrayList<>();

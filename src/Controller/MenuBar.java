@@ -29,6 +29,7 @@ public class MenuBar {
 
 
 
+
     public void initialize(){
         if(USER_SESSION == null){
             btnConnect.setText("Connexion");

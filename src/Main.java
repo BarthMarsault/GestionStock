@@ -26,6 +26,7 @@ public class Main extends Application {
 //            System.out.println(ut.toString());
 //        }
 
+
         launch(args);
         DataStorage.serializeData();
     }
