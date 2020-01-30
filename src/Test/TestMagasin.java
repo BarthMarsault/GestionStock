@@ -31,7 +31,7 @@ class TestMagasin {
     public void should_getUtilisateurById_ReturnNull_when_searchedUserDoesntExist(){
         magasin.addUtilisateur(user);
         assertNull(magasin.getUtilisateurById(888));
-        assertNotEquals(new Utilisateur("","",""), magasin.getUtilisateurById(10));
+        assertNotEquals(new Utilisateur("","","",null), magasin.getUtilisateurById(10));
     }
 
 

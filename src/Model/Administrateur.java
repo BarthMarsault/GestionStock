@@ -10,6 +10,6 @@ public class Administrateur extends Utilisateur implements Serializable {
     }
 
     public Administrateur(String nom, String prenom, String mdp) {
-        super(nom, prenom, mdp);
+        super(nom, prenom, mdp,null);
     }
 }

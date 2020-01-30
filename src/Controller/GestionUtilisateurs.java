@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.Utilisateur;
+import Utils.ViewLauncher;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -71,6 +72,12 @@ public class GestionUtilisateurs extends MenuBar{
 
 
         tblGestionUtilisateurs.setItems(data);
+    }
+
+
+    public void annuler(){
+        ViewLauncher launcher = new ViewLauncher(bPane,"GestionUtilisateurs", APPLICATION_NAME);
+        launcher.launch();
     }
 
 
