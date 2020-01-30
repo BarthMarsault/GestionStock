@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class TestUtilisateur {
 
-    Utilisateur user1 = new Utilisateur(1,"Dupont","Jean","123");
+    Utilisateur user1 = new Utilisateur(1,"Dupont","Jean","123", null);
 
     @Test
     void should_setMdp_returnFalse_when_wrongPassword() {
