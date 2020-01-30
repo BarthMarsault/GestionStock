@@ -8,10 +8,20 @@ public class Rayon implements Serializable {
     private String nom;
     private ArrayList<Article> listeArticles;
 
+    public Rayon(){
+        this.listeArticles = new ArrayList<>();
+    }
+
+    public Rayon(Rayon rayon){
+        this.nom = rayon.getNom();
+        this.listeArticles = rayon.getListeArticles();
+    }
+
     public Rayon(String nom, ArrayList<Article> listeArticles) {
         this.nom = nom;
         this.listeArticles = listeArticles;
     }
+
 
     public void addArticle(Article article){
         if(!listeArticles.contains(article) && article != null){
@@ -26,9 +36,7 @@ public class Rayon implements Serializable {
     }
 
     public void deleteArticle(Article article){
-        if(listeArticles.contains(article) && article != null) {
-            listeArticles.remove(article);
-        }
+        listeArticles.remove(article);
     }
 
     public String getNom() {

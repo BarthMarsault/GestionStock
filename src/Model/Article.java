@@ -23,6 +23,10 @@ public class Article implements Serializable {
         this.description = description;
     }
 
+    public Article(Article article){
+        this(article.getReference(),article.getNom(), article.getQte(), article.getDescription());
+    }
+
     public String getReference() {
         return reference;
     }

@@ -35,7 +35,7 @@ public class ModificationUtilisateur {
 
 
 
-    public void passArticle(Utilisateur utilisateur){
+    public void passUtilisateur(Utilisateur utilisateur){
         if(utilisateur != null) {
             ancienUtilisateur = utilisateur;
             txtId.setText(Integer.toString(utilisateur.getId()));

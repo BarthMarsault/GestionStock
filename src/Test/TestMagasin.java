@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TestMagasin {
 
     Magasin magasin = new Magasin(new ArrayList<>(), new ArrayList<>());
-    Utilisateur user = new Utilisateur(10,"Dupont","Jean","123");
+    Utilisateur user = new Utilisateur(10,"Dupont","Jean","123",null);
 
 
 

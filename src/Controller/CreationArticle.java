@@ -2,6 +2,7 @@ package Controller;
 
 import Model.Article;
 import Model.Rayon;
+import Utils.Consts;
 import Utils.DataStorage;
 import Utils.FiledFormater;
 import javafx.fxml.FXML;
@@ -10,7 +11,7 @@ import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
 
-public class CreationArticle {
+public class CreationArticle extends MenuBar{
 
 
     @FXML private TextField nomArticleTxtField;
@@ -20,62 +21,35 @@ public class CreationArticle {
     @FXML private TextArea descArticleTxtArea;
     @FXML private Label msgInformation;
 
-    public TextField getNomArticleTxtField() {
-        return nomArticleTxtField;
+    public CreationArticle(){
+        this.refArticleTxtField = null;
+        this.nomArticleTxtField = null;
+        this.qteArticleTxtField = null;
+        this.rayonArticleComboBox = null;
+        this.descArticleTxtArea = null;
+        this.msgInformation = null;
     }
 
-    public void setNomArticleTxtField(TextField nomArticleTxtField) {
-        this.nomArticleTxtField = nomArticleTxtField;
-    }
-
-    public TextField getRefArticleTxtField() {
-        return refArticleTxtField;
-    }
-
-    public void setRefArticleTxtField(TextField refArticleTxtField) {
+    public CreationArticle(TextField refArticleTxtField, TextField nomArticleTxtField, TextField qteArticleTxtField, ComboBox<String> rayonArticleComboBox, TextArea descArticleTxtArea, Label msgInformation) {
         this.refArticleTxtField = refArticleTxtField;
-    }
-
-    public TextField getQteArticleTxtField() {
-        return qteArticleTxtField;
-    }
-
-    public void setQteArticleTxtField(TextField qteArticleTxtField) {
+        this.nomArticleTxtField = nomArticleTxtField;
         this.qteArticleTxtField = qteArticleTxtField;
-    }
-
-    public ComboBox<String> getRayonArticleComboBox() {
-        return rayonArticleComboBox;
-    }
-
-    public void setRayonArticleComboBox(ComboBox<String> rayonArticleComboBox) {
         this.rayonArticleComboBox = rayonArticleComboBox;
-    }
-
-    public TextArea getDescArticleTxtArea() {
-        return descArticleTxtArea;
-    }
-
-    public void setDescArticleTxtArea(TextArea descArticleTxtArea) {
         this.descArticleTxtArea = descArticleTxtArea;
-    }
-
-    public Label getMsgInformation() {
-        return msgInformation;
-    }
-
-    public void setMsgInformation(Label msgInformation) {
         this.msgInformation = msgInformation;
     }
 
     @FXML
     public void initialize(){
+        super.initialize();
         rayonArticleComboBox.getItems().clear();
         ArrayList<Rayon> listeRayon = DataStorage.magasin.getListeRayons();
         ArrayList<String> listeNomRayon = new ArrayList<>();
         for(Rayon rayon : listeRayon){
-            listeNomRayon.add(rayon.getNom());
+            if(Consts.USER_SESSION.getRayon().equals(rayon))
+                listeNomRayon.add(rayon.getNom());
         }
+
         rayonArticleComboBox.getItems().addAll(listeNomRayon);
         msgInformation.setVisible(false);
         FiledFormater.noSpecialCharacters(nomArticleTxtField);
@@ -84,7 +58,7 @@ public class CreationArticle {
     }
 
     public void creationArticle(){
-        if(!refArticleTxtField.getText().equals("") && !nomArticleTxtField.getText().equals("") && !qteArticleTxtField.getText().equals("") && !rayonArticleComboBox.getValue().equals("")) {
+        if(!refArticleTxtField.getText().equals("") && !nomArticleTxtField.getText().equals("") && !qteArticleTxtField.getText().equals("") && rayonArticleComboBox.getValue() != null) {
             if (DataStorage.magasin.getArticleFromReference(refArticleTxtField.getText()) == null){
                 for (Rayon rayon : DataStorage.magasin.getListeRayons()) {
                     if (rayon.getNom().equals(rayonArticleComboBox.getValue())) {
