@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TestMagasin {
 
     Magasin magasin = new Magasin(new ArrayList<>(), new ArrayList<>());
-    Utilisateur user = new Utilisateur(10,"Dupont","Jean","123");
+    Utilisateur user = new Utilisateur(10,"Dupont","Jean","123",null);
 
 
 
@@ -31,7 +31,7 @@ class TestMagasin {
     public void should_getUtilisateurById_ReturnNull_when_searchedUserDoesntExist(){
         magasin.addUtilisateur(user);
         assertNull(magasin.getUtilisateurById(888));
-        assertNotEquals(new Utilisateur("","",""), magasin.getUtilisateurById(10));
+        assertNotEquals(new Utilisateur("","","",null), magasin.getUtilisateurById(10));
     }
 
 

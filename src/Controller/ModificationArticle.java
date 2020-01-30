@@ -26,6 +26,26 @@ public class ModificationArticle {
 
     private Article ancienArticle;
 
+    public ModificationArticle(){
+        this.refArticleTxtField = null;
+        this.nomArticleTxtField = null;
+        this.qteArticleTxtField = null;
+        this.rayonArticleComboBox = null;
+        this.descArticleTxtArea = null;
+        this.msgInformation = null;
+        this.ancienArticle = null;
+    }
+
+    public ModificationArticle(TextField refArticleTxtField, TextField nomArticleTxtField, TextField qteArticleTxtField, ComboBox<String> rayonArticleComboBox, TextArea descArticleTxtArea, Label msgInformation, Article article){
+        this.refArticleTxtField = refArticleTxtField;
+        this.nomArticleTxtField = nomArticleTxtField;
+        this.qteArticleTxtField = qteArticleTxtField;
+        this.rayonArticleComboBox = rayonArticleComboBox;
+        this.descArticleTxtArea = descArticleTxtArea;
+        this.msgInformation = msgInformation;
+        ancienArticle = article;
+    }
+
     @FXML
     public void initialize(){
 
@@ -56,14 +76,13 @@ public class ModificationArticle {
     public void modificationArticle(){
         if(!nomArticleTxtField.getText().equals("") && !refArticleTxtField.getText().equals("") && !qteArticleTxtField.getText().equals("") && rayonArticleComboBox.getValue() != null){
             if (ancienArticle.getReference().equals(refArticleTxtField.getText()) || DataStorage.magasin.getArticleFromReference(refArticleTxtField.getText()) == null) {
-                for (Rayon rayon : DataStorage.magasin.getListeRayons()) {
-                    if (rayon.getNom().equals(rayonArticleComboBox.getValue())) {
-                        rayon.updateArticle(ancienArticle, new Article(refArticleTxtField.getText(), nomArticleTxtField.getText(), Integer.parseInt(qteArticleTxtField.getText()), descArticleTxtArea.getText()));
-                        Stage stage = (Stage) validerBtn.getScene().getWindow();
-                        stage.close();
-                        ViewLauncher launcher = new ViewLauncher("ConsultationArticles",APPLICATION_NAME);
-                        launcher.launch();
-                    }
+                Rayon rayon = DataStorage.magasin.getRayonFromArticle(ancienArticle);
+                if (rayon != null){
+                    rayon.updateArticle(ancienArticle, new Article(refArticleTxtField.getText(), nomArticleTxtField.getText(), Integer.parseInt(qteArticleTxtField.getText()), descArticleTxtArea.getText()));
+                    Stage stage = (Stage) validerBtn.getScene().getWindow();
+                    stage.close();
+                    ViewLauncher launcher = new ViewLauncher("ConsultationArticles",APPLICATION_NAME);
+                    launcher.launch();
                 }
             }
             else{
@@ -78,4 +97,5 @@ public class ModificationArticle {
             msgInformation.setText("Veuillez remplir tous les champs.");
         }
     }
+
 }

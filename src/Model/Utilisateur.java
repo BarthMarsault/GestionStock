@@ -10,22 +10,25 @@ public class Utilisateur implements Serializable {
     private String nom;
     private String prenom;
     private String mdp;
+    private Rayon rayon;
 
 
 
-    public Utilisateur(int id, String nom, String prenom, String mdp) {
+    public Utilisateur(int id, String nom, String prenom, String mdp, Rayon rayon) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.mdp = mdp;
+        this.rayon = rayon;
 
     }
 
-    public Utilisateur(String nom, String prenom, String mdp) {
+    public Utilisateur(String nom, String prenom, String mdp, Rayon rayon) {
         this.id = generationIdentifiant();
         this.nom = nom;
         this.prenom = prenom;
         this.mdp = mdp;
+        this.rayon = rayon;
     }
 
 
@@ -71,5 +74,13 @@ public class Utilisateur implements Serializable {
 
     public void setMdp(String mdp) {
         this.mdp = mdp;
+    }
+
+    public Rayon getRayon() {
+        return rayon;
+    }
+
+    public void setRayon(Rayon rayon) {
+        this.rayon = rayon;
     }
 }

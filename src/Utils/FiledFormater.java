@@ -22,8 +22,8 @@ public class FiledFormater {
      */
     public static void onlyLetters(TextField txtField){
         txtField.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (!newValue.matches("\\sa-zA-Z*")) {
-                txtField.setText(newValue.replaceAll("[^\\sa-zA-Z]", ""));
+            if (!newValue.matches("\\sa-zA-Z0-9À-ÿ*")) {
+                txtField.setText(newValue.replaceAll("[^\\sa-zA-Z0-9À-ÿ]", ""));
             }
         });
     }
@@ -33,8 +33,8 @@ public class FiledFormater {
      */
     public static void noSpecialCharacters(TextField txtField){
         txtField.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (!newValue.matches("\\sa-zA-Z0-9")) {
-                txtField.setText(newValue.replaceAll("[^\\sa-zA-Z0-9]", ""));
+            if (!newValue.matches("\\s-a-zA-Z0-9À-ÿ")) {
+                txtField.setText(newValue.replaceAll("[^\\s-a-zA-Z0-9À-ÿ]", ""));
             }
         });
     }

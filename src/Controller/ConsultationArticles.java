@@ -2,6 +2,7 @@ package Controller;
 
 import Model.Article;
 import Model.Rayon;
+import Utils.Consts;
 import Utils.DataStorage;
 import Utils.ViewLauncher;
 import javafx.beans.property.SimpleObjectProperty;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
 
 import static Utils.Consts.APPLICATION_NAME;
 
-public class ConsultationArticles {
+public class ConsultationArticles extends MenuBar {
 
 
     @FXML private AnchorPane consultationAnchor;
@@ -35,9 +36,11 @@ public class ConsultationArticles {
 
     @FXML
     public void initialize(){
+        super.initialize();
         ArrayList<Article> listeArticles = new ArrayList<>();
         for(Rayon rayon : DataStorage.magasin.getListeRayons()){
-            listeArticles.addAll(rayon.getListeArticles());
+            if(Consts.USER_SESSION.getRayon().equals(rayon))
+                listeArticles.addAll(rayon.getListeArticles());
         }
         data = FXCollections.observableList(listeArticles);//Faire selon l'utilisateur (prendre que les articles du rayon auquel il est affecté)
         refArticleColumn.setCellValueFactory(cellData->new SimpleStringProperty(cellData.getValue().getReference()));
@@ -45,10 +48,10 @@ public class ConsultationArticles {
         qteArticleColumn.setCellValueFactory(cellData->new SimpleStringProperty(Integer.toString(cellData.getValue().getQte())));
         rayonArticleColumn.setCellValueFactory(cellData->new SimpleStringProperty(DataStorage.magasin.getRayonFromArticle(cellData.getValue()).getNom()));
 
-        Callback<TableColumn<Article, Void>, TableCell<Article, Void>> detailsCellFactory = new Callback<TableColumn<Article, Void>, TableCell<Article, Void>>() {
+        Callback<TableColumn<Article, Void>, TableCell<Article, Void>> detailsCellFactory = new Callback<>() {
             @Override
             public TableCell<Article, Void> call(final TableColumn<Article, Void> param) {
-                final TableCell<Article, Void> cell = new TableCell<Article, Void>() {
+                final TableCell<Article, Void> cell = new TableCell<>() {
 
                     private final Button detailsBtn = new Button("Détails");
                     private final Button modificationBtn = new Button("Modifier");
@@ -56,7 +59,7 @@ public class ConsultationArticles {
                     {
                         detailsBtn.setOnAction((ActionEvent event) -> {
                             Article article = getTableView().getItems().get(getIndex());
-                            ViewLauncher launcher = new ViewLauncher(consultationAnchor,"DetailsArticle", APPLICATION_NAME);
+                            ViewLauncher launcher = new ViewLauncher(bPane,"DetailsArticle", APPLICATION_NAME);
                             DetailsArticle detailsArticle = (DetailsArticle) launcher.getAController();
                             detailsArticle.passArticle(article);
                             launcher.launch();
@@ -88,7 +91,7 @@ public class ConsultationArticles {
                     {
                         modificationBtn.setOnAction((ActionEvent event) -> {
                             Article article = getTableView().getItems().get(getIndex());
-                            ViewLauncher launcher = new ViewLauncher(consultationAnchor,"ModificationArticle", APPLICATION_NAME);
+                            ViewLauncher launcher = new ViewLauncher(bPane,"ModificationArticle", APPLICATION_NAME);
                             ModificationArticle modificationArticle = (ModificationArticle) launcher.getAController();
                             modificationArticle.passArticle(article);
                             launcher.launch();
