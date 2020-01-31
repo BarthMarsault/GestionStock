@@ -13,7 +13,6 @@ public class Utilisateur implements Serializable {
     private Rayon rayon;
 
 
-
     public Utilisateur(int id, String nom, String prenom, String mdp, Rayon rayon) {
         this.id = id;
         this.nom = nom;
@@ -75,7 +74,7 @@ public class Utilisateur implements Serializable {
     }
 
     public void setMdp(String mdp) {
-        if(validationMdp(mdp)){
+        if (validationMdp(mdp)) {
             this.mdp = mdp;
         }
     }
@@ -94,12 +93,20 @@ public class Utilisateur implements Serializable {
         return false;
     }
 
-    public Rayon getRayon() {
-        return rayon;
+    public boolean validationMdp(String mdp) {
+        if (mdp.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)([-+!*$@%_\\w]{6,20})$")) {
+            return true;
+        }
+        return false;
     }
 
-    public void setRayon(Rayon rayon) {
-        this.rayon = rayon;
+
+    public Rayon getRayon(){
+      return rayon;
+    }
+
+    public void setRayon(Rayon rayon){
+      this.rayon = rayon;
     }
 
 }

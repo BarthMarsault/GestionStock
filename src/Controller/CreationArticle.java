@@ -66,6 +66,7 @@ public class CreationArticle extends MenuBar{
                         msgInformation.setVisible(true);
                         msgInformation.setTextFill(Color.web("#63a32e"));
                         msgInformation.setText("Article créé");
+
                     }
                 }
             }

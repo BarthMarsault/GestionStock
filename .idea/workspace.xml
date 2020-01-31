@@ -2,28 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/testfx_junit5_4_0_15_alpha.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test/testModificationArticle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test/testRayon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionStock.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GestionStock.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ConsultationArticles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ConsultationArticles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/CreationArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CreationArticle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DetailsArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DetailsArticle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ModificationArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ModificationArticle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ModificationUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ModificationUtilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Administrateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Administrateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Rayon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Rayon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Utilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/TestMagasin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/TestMagasin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/TestUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/TestUtilisateur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test/testCreationArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/testCreationArticle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/DataStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/DataStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/FiledFormater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/FiledFormater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/ConsultationArticles.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ConsultationArticles.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/CreationArticle.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/CreationArticle.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/DetailsArticle.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/DetailsArticle.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/testModificationArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/testModificationArticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/testRayon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/testRayon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +113,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
     <property name="last.edited.regexp" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/testfx-junit5-4.0.15-alpha.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -150,7 +135,7 @@
       <recent name="C:\Users\PYL\Documents\GitHub\GestionStock\src\View" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.testModificationArticle">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -282,6 +267,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="testCreationArticle.testChampsVides" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GestionStock" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.testCreationArticle" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testModificationArticle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GestionStock" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.testModificationArticle" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="testModificationArticle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GestionStock" />
       <extension name="coverage">
@@ -324,10 +347,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestUtilisateur" />
-        <item itemvalue="JUnit.Test in GestionStock" />
         <item itemvalue="JUnit.testModificationArticle" />
         <item itemvalue="JUnit.testCreationArticle" />
+        <item itemvalue="JUnit.TestUtilisateur" />
         <item itemvalue="JUnit.TestMagasin" />
       </list>
     </recent_temporary>
@@ -398,21 +420,20 @@
     </state>
     <state x="374" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1217.720@0.0.1217.720" timestamp="1579603607500" />
     <state x="393" y="156" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1580334281032" />
-    <state x="1313" y="-1080" width="458" height="520" key="#com.intellij.ide.util.MemberChooser" timestamp="1580418295805">
-      <screen x="642" y="-1080" width="1920" height="1040" />
+    <state x="425" y="0" width="458" height="520" key="#com.intellij.ide.util.MemberChooser" timestamp="1580415493776">
+      <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state x="425" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1217.720@0.0.1217.720" timestamp="1580120053428" />
-    <state x="1313" y="-1080" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580418295805" />
+    <state x="425" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1217.720@0.0.1217.720" timestamp="1580415493776" />
     <state x="447" y="0" width="458" height="520" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1578565129521" />
     <state x="454" y="245" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1580403262076">
       <screen x="0" y="0" width="1217" height="720" />
     </state>
     <state x="454" y="245" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1217.720@0.0.1217.720" timestamp="1580403262076" />
     <state x="478" y="231" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.680@0.0.1280.680" timestamp="1580315973745" />
-    <state x="339" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580410048420">
+    <state x="339" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580415521832">
       <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state x="339" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1217.720@0.0.1217.720" timestamp="1580410048420" />
+    <state x="339" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1217.720@0.0.1217.720" timestamp="1580415521832" />
     <state x="155" y="0" key="CommitChangelistDialog2" timestamp="1578565734626">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -423,34 +444,30 @@
     <state x="401" y="88" key="FileChooserDialogImpl/0.0.1217.720@0.0.1217.720" timestamp="1578568352226" />
     <state x="1275" y="-953" key="FileChooserDialogImpl/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580466451948" />
     <state x="422" y="83" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1580334302158" />
-    <state x="1436" y="-660" width="356" height="200" key="Github.CreateGistDialog" timestamp="1580421165098">
-      <screen x="642" y="-1080" width="1920" height="1040" />
+    <state width="564" height="209" key="GridCell.Tab.0.bottom" timestamp="1580425005881">
+      <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state x="1436" y="-660" width="356" height="200" key="Github.CreateGistDialog/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580421165098" />
-    <state width="1877" height="163" key="GridCell.Tab.0.bottom" timestamp="1580467362063">
-      <screen x="642" y="-1080" width="1920" height="1040" />
+    <state width="564" height="209" key="GridCell.Tab.0.bottom/0.0.1217.720@0.0.1217.720" timestamp="1580425005881" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580396476312" />
+    <state width="1237" height="281" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1580403003521" />
+    <state width="564" height="209" key="GridCell.Tab.0.center" timestamp="1580425005880">
+      <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state width="1173" height="178" key="GridCell.Tab.0.bottom/0.0.1217.720@0.0.1217.720" timestamp="1580410816679" />
-    <state width="1877" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580467362063" />
-    <state width="1237" height="281" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1580427878442" />
-    <state width="1877" height="163" key="GridCell.Tab.0.center" timestamp="1580467362063">
-      <screen x="642" y="-1080" width="1920" height="1040" />
+    <state width="564" height="209" key="GridCell.Tab.0.center/0.0.1217.720@0.0.1217.720" timestamp="1580425005880" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580396476312" />
+    <state width="1237" height="281" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1580403003521" />
+    <state width="564" height="209" key="GridCell.Tab.0.left" timestamp="1580425005880">
+      <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state width="1173" height="178" key="GridCell.Tab.0.center/0.0.1217.720@0.0.1217.720" timestamp="1580410816679" />
-    <state width="1877" height="163" key="GridCell.Tab.0.center/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580467362063" />
-    <state width="1237" height="281" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1580427878441" />
-    <state width="1877" height="163" key="GridCell.Tab.0.left" timestamp="1580467362063">
-      <screen x="642" y="-1080" width="1920" height="1040" />
+    <state width="564" height="209" key="GridCell.Tab.0.left/0.0.1217.720@0.0.1217.720" timestamp="1580425005880" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580396476312" />
+    <state width="1237" height="281" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1580403003521" />
+    <state width="564" height="209" key="GridCell.Tab.0.right" timestamp="1580425005880">
+      <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state width="1173" height="178" key="GridCell.Tab.0.left/0.0.1217.720@0.0.1217.720" timestamp="1580410816679" />
-    <state width="1877" height="163" key="GridCell.Tab.0.left/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580467362063" />
-    <state width="1237" height="281" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1580427878441" />
-    <state width="1877" height="163" key="GridCell.Tab.0.right" timestamp="1580467362063">
-      <screen x="642" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="1173" height="178" key="GridCell.Tab.0.right/0.0.1217.720@0.0.1217.720" timestamp="1580410816679" />
-    <state width="1877" height="163" key="GridCell.Tab.0.right/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580467362063" />
-    <state width="1237" height="281" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1580427878441" />
+    <state width="564" height="209" key="GridCell.Tab.0.right/0.0.1217.720@0.0.1217.720" timestamp="1580425005880" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580396476312" />
+    <state width="1237" height="281" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1580403003521" />
     <state width="1173" height="220" key="GridCell.Tab.1.bottom" timestamp="1580129363579">
       <screen x="0" y="0" width="1217" height="720" />
     </state>
@@ -467,11 +484,11 @@
       <screen x="0" y="0" width="1217" height="720" />
     </state>
     <state width="1173" height="220" key="GridCell.Tab.1.right/0.0.1217.720@0.0.1217.720" timestamp="1580129363579" />
-    <state x="825" y="-1080" key="SettingsEditor" timestamp="1580416236971">
-      <screen x="642" y="-1080" width="1920" height="1040" />
+    <state x="116" y="0" key="SettingsEditor" timestamp="1580416154571">
+      <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state x="116" y="0" key="SettingsEditor/0.0.1217.720@0.0.1217.720" timestamp="1579969961863" />
-    <state x="825" y="-1080" key="SettingsEditor/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580416236971" />
+    <state x="116" y="0" key="SettingsEditor/0.0.1217.720@0.0.1217.720" timestamp="1580416154571" />
+    <state x="825" y="-1080" key="SettingsEditor/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580383054829" />
     <state x="122" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1580334141809" />
     <state x="339" y="167" key="com.intellij.ide.util.TipDialog" timestamp="1580466195608">
       <screen x="0" y="0" width="1280" height="680" />

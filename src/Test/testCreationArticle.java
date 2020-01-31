@@ -4,9 +4,7 @@ import Controller.CreationArticle;
 import Model.Article;
 import Utils.DataStorage;
 import Utils.FiledFormater;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -40,10 +38,6 @@ public class testCreationArticle {
         FiledFormater.noSpecialCharacters(refArticleTxtField);
         FiledFormater.onlyNumbers(qteArticleTxtField);
         creationArticle = new CreationArticle(refArticleTxtField, nomArticleTxtField, qteArticleTxtField, rayonArticleComboBox, descArticleTxtArea, msgInformationLabel);
-         Button validerBtn = new Button("Valider");
-        validerBtn.setOnAction(actionEvent -> creationArticle.creationArticle());
-        stage.setScene(new Scene(new StackPane(validerBtn), 100, 100));
-        stage.show();
     }
 
     @Test
@@ -53,7 +47,7 @@ public class testCreationArticle {
         refArticleTxtField.setText("");
         qteArticleTxtField.setText("");
         rayonArticleComboBox.setValue("");
-        robot.clickOn(".button");
+        creationArticle.creationArticle();
         //Then :
         //Un message d'avertissement apparaît
         Assertions.assertThat(msgInformationLabel).hasText("Veuillez remplir tous les champs.");
@@ -68,7 +62,7 @@ public class testCreationArticle {
         refArticleTxtField.setText("G463");
         qteArticleTxtField.setText("");
         rayonArticleComboBox.setValue("Sport");
-        robot.clickOn(".button");
+        creationArticle.creationArticle();
         //Then :
         //Un message d'avertissement apparaît
         Assertions.assertThat(msgInformationLabel).hasText("Veuillez remplir tous les champs.");
@@ -83,8 +77,7 @@ public class testCreationArticle {
         refArticleTxtField.setText("B685");
         qteArticleTxtField.setText("Erreur");
         rayonArticleComboBox.setValue("Sport");
-
-        robot.clickOn(".button");
+        creationArticle.creationArticle();
         //Then :
         //Un message d'avertissement apparaît puisque il n'est possible de mettre que des chiffres
         Assertions.assertThat(msgInformationLabel).hasText("Veuillez remplir tous les champs.");
@@ -99,8 +92,7 @@ public class testCreationArticle {
         refArticleTxtField.setText("R578");
         qteArticleTxtField.setText("21");
         rayonArticleComboBox.setValue("Sport");
-
-        robot.clickOn(".button");
+        creationArticle.creationArticle();
         //Then :
         //Un message d'avertissement apparaît puisque il n'est pas possible de mettre que des caractères spéciaux
         Assertions.assertThat(msgInformationLabel).hasText("Veuillez remplir tous les champs.");
@@ -116,7 +108,7 @@ public class testCreationArticle {
         qteArticleTxtField.setText("20");
         rayonArticleComboBox.setValue("Sport");
         descArticleTxtArea.setText("Chaussures de bonne qualité.");
-        robot.clickOn(".button");
+        creationArticle.creationArticle();
         //Then :
         Article articleCreated = DataStorage.magasin.getArticleFromReference("H876");
         Assertions.assertThat(articleCreated).isNotNull();
@@ -134,7 +126,7 @@ public class testCreationArticle {
         refArticleTxtField.setText("A123");
         qteArticleTxtField.setText("42");
         rayonArticleComboBox.setValue("Sport");
-        robot.clickOn(".button");
+        creationArticle.creationArticle();
         //Then :
         //Un message d'avertissement apparaît
         Assertions.assertThat(msgInformationLabel).hasText("Référence déjà existante.");

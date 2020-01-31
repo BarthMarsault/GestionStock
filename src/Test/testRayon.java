@@ -12,7 +12,7 @@ import java.util.Collections;
 public class testRayon {
 
     Article article1 = new Article("E345","Pantalon",74,"Pantalon de bonne qualité.");
-    Article article2 = new Article("H935","Pantalon",74,"Pantalon de bonne qualité.");
+    Article article2 = new Article("H935","Pull",30,"Pull de bonne qualité.");
     Rayon rayon = new Rayon("Vêtements",new ArrayList<Article>(Arrays.asList(article1, article2)));
 
     @Test

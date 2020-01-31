@@ -73,7 +73,7 @@ public class testModificationArticle {
         refArticleTxtField.setText("G463");
         qteArticleTxtField.setText("");
         rayonArticleComboBox.setValue("Sport");
-        robot.clickOn(".button");
+        modificationArticle.modificationArticle();
         //Then :
         //Un message d'avertissement apparaît
         Assertions.assertThat(msgInformationLabel).hasText("Veuillez remplir tous les champs.");
@@ -88,8 +88,7 @@ public class testModificationArticle {
         refArticleTxtField.setText("B685");
         qteArticleTxtField.setText("Erreur");
         rayonArticleComboBox.setValue("Sport");
-
-        robot.clickOn(".button");
+        modificationArticle.modificationArticle();
         //Then :
         //Un message d'avertissement apparaît puisque il n'est possible de mettre que des chiffres
         Assertions.assertThat(msgInformationLabel).hasText("Veuillez remplir tous les champs.");
@@ -104,8 +103,7 @@ public class testModificationArticle {
         refArticleTxtField.setText("R578");
         qteArticleTxtField.setText("21");
         rayonArticleComboBox.setValue("Sport");
-
-        robot.clickOn(".button");
+        modificationArticle.modificationArticle();
         //Then :
         //Un message d'avertissement apparaît puisque il n'est pas possible de mettre que des caractères spéciaux
         Assertions.assertThat(msgInformationLabel).hasText("Veuillez remplir tous les champs.");
@@ -121,7 +119,7 @@ public class testModificationArticle {
         qteArticleTxtField.setText("20");
         rayonArticleComboBox.setValue("Sport");
         descArticleTxtArea.setText("Chaussures de bonne qualité.");
-        robot.clickOn(".button");
+        modificationArticle.modificationArticle();
         //Then :
         Assertions.assertThat(apresModifArticle.getNom()).isNotEqualTo(avantModifArticle.getNom());
         Assertions.assertThat(apresModifArticle.getNom()).isEqualTo("Chaussures");
@@ -138,7 +136,7 @@ public class testModificationArticle {
         refArticleTxtField.setText("D13");
         qteArticleTxtField.setText("42");
         rayonArticleComboBox.setValue("Sport");
-        robot.clickOn(".button");
+        modificationArticle.modificationArticle();
         //Then :
         //Un message d'avertissement apparaît
         Assertions.assertThat(msgInformationLabel).hasText("Référence déjà existante.");
