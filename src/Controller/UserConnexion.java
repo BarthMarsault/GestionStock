@@ -30,7 +30,13 @@ public class UserConnexion extends MenuBar {
      */
     public void connexion(){
 
-        Utilisateur utilisateur = magasin.getUtilisateurById(Integer.parseInt(txtId.getText()));
+
+        Utilisateur utilisateur = null;
+        if(txtId.getText() != ""){
+            utilisateur = magasin.getUtilisateurById(Integer.parseInt(txtId.getText()));
+        }
+
+
         if(utilisateur != null) {
             if (utilisateur.getMdp().equals(txtMdp.getText())) {
                 Consts.USER_SESSION = utilisateur;

@@ -54,4 +54,10 @@ public class Rayon implements Serializable {
     public void setListeArticles(ArrayList<Article> listeArticles) {
         this.listeArticles = listeArticles;
     }
+
+    @Override
+    public String
+    toString() {
+        return nom;
+    }
 }

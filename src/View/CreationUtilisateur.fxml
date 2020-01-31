@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CreationUtilisateur">
+<BorderPane fx:id="bPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CreationUtilisateur">
     <center>
         <GridPane layoutX="-1.0" prefHeight="254.0" prefWidth="293.3333333333333" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <columnConstraints>
@@ -55,7 +55,7 @@
                 <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
                     <children>
                         <Button mnemonicParsing="false" onAction="#annuler" text="Annuler" />
-                        <Button fx:id="validerBtn" mnemonicParsing="false" text="Valider" />
+                        <Button fx:id="validerBtn" mnemonicParsing="false" onAction="#creationUtilisateur" text="Valider" />
                     </children>
                 </HBox>
             <Label text="Administrateur" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
@@ -75,6 +75,21 @@
             </Label>
             <ComboBox fx:id="cbRayon" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <Label fx:id="txtAvertissementMdp" textFill="#f11919" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="txtAvertissementRayon" textFill="#f11919" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="txtAvertissementNom" textFill="#f11919" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="txtAvertissementPrenom" textFill="#f11919" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin>

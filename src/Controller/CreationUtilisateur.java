@@ -21,6 +21,9 @@ public class CreationUtilisateur extends MenuBar {
     @FXML Button validerBtn;
     @FXML CheckBox ckbAdmin;
     @FXML Label txtAvertissementMdp;
+    @FXML Label txtAvertissementRayon;
+    @FXML Label txtAvertissementNom;
+    @FXML Label txtAvertissementPrenom;
     @FXML Label labelRayon;
     @FXML ComboBox<Rayon> cbRayon;
 
@@ -38,31 +41,56 @@ public class CreationUtilisateur extends MenuBar {
 
 
 
-    public boolean creationUtilisateur(){
-//        Utilisateur user;
-//        if(ckbAdmin.isSelected()){
-//            user = new Administrateur();
-//        }else{
-//            user = new Utilisateur();
-//        }
-//
-//        user.setNom(txtNom.getText());
-//        user.setPrenom(txtPrenom.getText());
-//        if(user.validationMdp(txtMdp.getText())){
-//            txtAvertissementMdp.setText("Mot de passe non valide");
-//            return false;
-//        }else{
-//            txtAvertissementMdp.setText("");
-//        }
-//        if(cbRayon.getValue().equals(null) && !ckbAdmin.isSelected()){
-//            return false;
-//        }
-//        user.setRayon(cbRayon.getValue());
-//
-//
-//        magasin.addUtilisateur(user);
+    public void creationUtilisateur(){
+        Boolean result = true;
+        Utilisateur user;
+        if(ckbAdmin.isSelected()){
+            user = new Administrateur();
+        }else{
+            user = new Utilisateur();
+        }
 
-        return true;
+        if(user.validationNomPrenom(txtNom.getText())){
+            user.setNom(txtNom.getText());
+            txtAvertissementNom.setText("");
+        }else{
+            result =false;
+            txtAvertissementNom.setText("Nom non valide");
+        }
+
+
+        if(user.validationNomPrenom(txtPrenom.getText())){
+            user.setPrenom(txtPrenom.getText());
+            txtAvertissementPrenom.setText("");
+        }else{
+            result =false;
+            txtAvertissementPrenom.setText("Prénom non valide");
+        }
+
+
+
+        if(!user.validationMdp(txtMdp.getText())){
+            txtAvertissementMdp.setText("Mot de passe non valide");
+            result = false;
+        }else{
+            user.setMdp(txtMdp.getText());
+            txtAvertissementMdp.setText("");
+        }
+        if(cbRayon.getValue() == null && !ckbAdmin.isSelected()){
+            txtAvertissementRayon.setText("Selectionner un Rayon");
+            result = false;
+        }else{
+            user.setRayon(cbRayon.getValue());
+            txtAvertissementRayon.setText("");
+        }
+
+
+
+        if(result){
+            magasin.addUtilisateur(user);
+            annuler();
+        }
+
     }
 
 

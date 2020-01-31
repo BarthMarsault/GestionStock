@@ -39,10 +39,12 @@
                   <Insets right="10.0" />
                </padding>
             </HBox>
-            <Button mnemonicParsing="false" onAction="#backHome" text="Accueil">
-               <GridPane.margin>
-                  <Insets left="10.0" right="10.0" />
-               </GridPane.margin></Button>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#backHome" text="Accueil" />
+                  <Button mnemonicParsing="false" onAction="#creationUtilisateur" text="Creer un utilisateur" />
+               </children>
+            </HBox>
          </children>
       </GridPane>
    </top>

@@ -30,7 +30,6 @@ public class GestionUtilisateurs extends MenuBar{
 
     public void initialize(){
         super.initialize();
-        System.out.println(magasin.getListeUtilisateurs().size());
         data = FXCollections.observableArrayList(magasin.getListeUtilisateurs());
         colPrenomUtilisateur.setCellValueFactory(cellData->new SimpleStringProperty(cellData.getValue().getPrenom()));
         colNomUtilisateur.setCellValueFactory(cellData->new SimpleStringProperty(cellData.getValue().getNom()));
@@ -75,8 +74,8 @@ public class GestionUtilisateurs extends MenuBar{
     }
 
 
-    public void annuler(){
-        ViewLauncher launcher = new ViewLauncher(bPane,"GestionUtilisateurs", APPLICATION_NAME);
+    public void creationUtilisateur(){
+        ViewLauncher launcher = new ViewLauncher(bPane,"CreationUtilisateur", APPLICATION_NAME);
         launcher.launch();
     }
 

@@ -96,6 +96,9 @@ public class DataStorage {
     public static void stub(){
         magasin = new Magasin();
 
+
+
+
         //Ajout de rayons
         ArrayList<Article> listeArticles = new ArrayList<>();
         listeArticles.add(new Article("A123", "Paire de chaussures", 34, "Paire de chaussures super confortable."));
@@ -114,6 +117,8 @@ public class DataStorage {
         magasin.addUtilisateur(new Utilisateur(1,"Dupont","Jean","123",rayon1));
         magasin.addUtilisateur(new Utilisateur(2,"Duper","Je suis","123", rayon2));
         magasin.addUtilisateur(new Administrateur(10,"admin","admin","123"));
+
+
 
     }
 

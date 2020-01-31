@@ -1,22 +1,22 @@
 package Controller;
 
-import Model.Article;
+import Model.Rayon;
 import Model.Utilisateur;
-import Utils.DataStorage;
-import Utils.FiledFormater;
 import Utils.ViewLauncher;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 
+
 import static Utils.Consts.APPLICATION_NAME;
+import static Utils.DataStorage.magasin;
 
 public class ModificationUtilisateur {
 
     private Utilisateur ancienUtilisateur;
+
     @FXML
     BorderPane bPane;
 
@@ -26,10 +26,78 @@ public class ModificationUtilisateur {
     @FXML PasswordField txtMdp;
     @FXML Label msgInformation;
     @FXML Button validerBtn;
+    @FXML Label txtAvertissementMdp;
+    @FXML Label txtAvertissementRayon;
+    @FXML Label txtAvertissementNom;
+    @FXML Label txtAvertissementPrenom;
+    @FXML Label labelRayon;
+    @FXML ComboBox<Rayon> cbRayon;
+
 
     public void initialize(){
-
         msgInformation.setVisible(false);
+
+        if(ancienUtilisateur.getClass().equals("Model.Administrateur")){
+            cbRayon.setVisible(false);
+            labelRayon.setVisible(false);
+        }else{
+            cbRayon.setVisible(true);
+            labelRayon.setVisible(true);
+
+            ObservableList<Rayon> listeRayons = FXCollections.observableArrayList(magasin.getListeRayons());
+            cbRayon.setItems(listeRayons);
+            cbRayon.getSelectionModel().select(ancienUtilisateur.getRayon());
+        }
+    }
+
+
+
+    public void modificationUtilisateur(){
+        Boolean result = true;
+
+        if(ancienUtilisateur.validationNomPrenom(txtNom.getText())){
+
+            txtAvertissementNom.setText("");
+        }else{
+            result =false;
+            txtAvertissementNom.setText("Nom non valide");
+        }
+
+
+        if(ancienUtilisateur.validationNomPrenom(txtPrenom.getText())){
+
+            txtAvertissementPrenom.setText("");
+        }else{
+            result =false;
+            txtAvertissementPrenom.setText("Prénom non valide");
+        }
+
+
+
+        if(!ancienUtilisateur.validationMdp(txtMdp.getText())){
+            txtAvertissementMdp.setText("Mot de passe non valide");
+            result = false;
+        }else{
+            txtAvertissementMdp.setText("");
+        }
+        if(cbRayon.getValue() == null && ancienUtilisateur.getClass().equals("Model.Utilisateur")){
+            txtAvertissementRayon.setText("Selectionner un Rayon");
+            result = false;
+        }else{
+            txtAvertissementRayon.setText("");
+        }
+
+
+
+
+        if(result){
+//            ancienUtilisateur.setNom(txtNom.getText());
+//            ancienUtilisateur.setPrenom(txtPrenom.getText());
+//            ancienUtilisateur.setMdp(txtMdp.getText());
+//            ancienUtilisateur.setRayon(cbRayon.getValue());
+            annuler();
+        }
+
     }
 
 
@@ -42,6 +110,7 @@ public class ModificationUtilisateur {
             txtNom.setText(utilisateur.getNom());
             txtPrenom.setText(utilisateur.getPrenom());
             txtMdp.setText(utilisateur.getMdp());
+            cbRayon.getSelectionModel().select(utilisateur.getRayon());
         }
     }
 

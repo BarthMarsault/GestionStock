@@ -31,7 +31,9 @@ public class Utilisateur implements Serializable {
         this.rayon = rayon;
     }
 
-
+    public Utilisateur() {
+        this.id = generationIdentifiant();
+    }
 
     @Override
     public String toString() {
@@ -41,7 +43,7 @@ public class Utilisateur implements Serializable {
 
 
     public int generationIdentifiant(){
-        return  (int) (Math.random() * (999999 - 1000));
+        return  (int) (Math.random() * (999999));
     }
 
     public int getId() {
@@ -85,6 +87,13 @@ public class Utilisateur implements Serializable {
         return false;
     }
 
+    public boolean validationNomPrenom(String str){
+        if(str.matches("^[A-Za-z\\é\\è\\ê\\-]+$")){
+            return true;
+        }
+        return false;
+    }
+
     public Rayon getRayon() {
         return rayon;
     }
@@ -93,11 +102,4 @@ public class Utilisateur implements Serializable {
         this.rayon = rayon;
     }
 
-    public Rayon getRayon() {
-        return rayon;
-    }
-
-    public void setRayon(Rayon rayon) {
-        this.rayon = rayon;
-    }
 }
