@@ -93,13 +93,6 @@ public class Utilisateur implements Serializable {
         return false;
     }
 
-    public boolean validationMdp(String mdp) {
-        if (mdp.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)([-+!*$@%_\\w]{6,20})$")) {
-            return true;
-        }
-        return false;
-    }
-
 
     public Rayon getRayon(){
       return rayon;

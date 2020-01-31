@@ -7,6 +7,7 @@ import Utils.FiledFormater;
 import Utils.ViewLauncher;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -23,6 +24,7 @@ public class ModificationArticle {
     @FXML private TextArea descArticleTxtArea;
     @FXML private Button validerBtn;
     @FXML private Label msgInformation;
+    @FXML private AnchorPane aPane;
 
     private Article ancienArticle;
 
@@ -79,9 +81,7 @@ public class ModificationArticle {
                 Rayon rayon = DataStorage.magasin.getRayonFromArticle(ancienArticle);
                 if (rayon != null){
                     rayon.updateArticle(ancienArticle, new Article(refArticleTxtField.getText(), nomArticleTxtField.getText(), Integer.parseInt(qteArticleTxtField.getText()), descArticleTxtArea.getText()));
-                    Stage stage = (Stage) validerBtn.getScene().getWindow();
-                    stage.close();
-                    ViewLauncher launcher = new ViewLauncher("ConsultationArticles",APPLICATION_NAME);
+                    ViewLauncher launcher = new ViewLauncher(aPane,"ConsultationArticles",APPLICATION_NAME);
                     launcher.launch();
                 }
             }
