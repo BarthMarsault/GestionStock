@@ -50,6 +50,10 @@ public class Magasin implements Serializable {
         return lastId + 1;
     }
 
+    /**
+     * Ajoute l'utilisateur passé en paramètre dans le magasin
+     * @param utilisateur
+     */
     public void addUtilisateur(Utilisateur utilisateur){
         if(!listeUtilisateurs.contains(utilisateur) && utilisateur != null){
             listeUtilisateurs.add(utilisateur);
@@ -57,6 +61,10 @@ public class Magasin implements Serializable {
 
     }
 
+    /**
+     * Retire l'utilisateur passé en paramètre du magasin
+     * @param utilisateur
+     */
     public void deleteUtilisateur(Utilisateur utilisateur){
         try{
             listeUtilisateurs.remove(utilisateur);

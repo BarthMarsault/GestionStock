@@ -56,8 +56,7 @@ public class Rayon implements Serializable {
     }
 
     @Override
-    public String
-    toString() {
+    public String toString() {
         return nom;
     }
 }

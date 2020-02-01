@@ -141,7 +141,7 @@
       <recent name="C:\Users\PYL\Documents\GitHub\GestionStock\src\View" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.Test in GestionStock">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -188,6 +188,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test in GestionStock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GestionStock" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestMagasin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GestionStock" />
       <extension name="coverage">
@@ -198,25 +216,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="Test" />
       <option name="MAIN_CLASS_NAME" value="Test.TestMagasin" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestUtilisateur" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GestionStock" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.TestUtilisateur" />
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -335,11 +334,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Test in GestionStock" />
         <item itemvalue="JUnit.testRayon" />
         <item itemvalue="JUnit.TestMagasin" />
         <item itemvalue="JUnit.testModificationArticle" />
         <item itemvalue="JUnit.testCreationArticle" />
-        <item itemvalue="JUnit.TestUtilisateur" />
       </list>
     </recent_temporary>
   </component>
@@ -380,7 +379,8 @@
       <workItem from="1580476413356" duration="5508000" />
       <workItem from="1580490523210" duration="847000" />
       <workItem from="1580575209845" duration="1423000" />
-      <workItem from="1580578932770" duration="1416000" />
+      <workItem from="1580578932770" duration="2581000" />
+      <workItem from="1580590469152" duration="913000" />
     </task>
     <servers />
   </component>
@@ -432,38 +432,38 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="155" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1578565734626" />
-    <state x="633" y="127" key="FileChooserDialogImpl" timestamp="1580579098143">
+    <state x="633" y="127" key="FileChooserDialogImpl" timestamp="1580581697220">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="633" y="127" key="FileChooserDialogImpl/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580579098143" />
+    <state x="633" y="127" key="FileChooserDialogImpl/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580581697220" />
     <state x="401" y="88" key="FileChooserDialogImpl/0.0.1217.720@0.0.1217.720" timestamp="1580475936651" />
     <state x="1275" y="-953" key="FileChooserDialogImpl/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580466451948" />
     <state x="422" y="83" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1580334302158" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1580580336040">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1580580899217">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580580336040" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580580899217" />
     <state width="1173" height="216" key="GridCell.Tab.0.bottom/0.0.1217.720@0.0.1217.720" timestamp="1580490825335" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580396476312" />
     <state width="1237" height="281" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1580403003521" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1580580336040">
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1580580899217">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580580336040" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580580899217" />
     <state width="1173" height="216" key="GridCell.Tab.0.center/0.0.1217.720@0.0.1217.720" timestamp="1580490825335" />
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580396476312" />
     <state width="1237" height="281" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1580403003521" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1580580336040">
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1580580899217">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580580336040" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580580899217" />
     <state width="1173" height="216" key="GridCell.Tab.0.left/0.0.1217.720@0.0.1217.720" timestamp="1580490825335" />
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580396476312" />
     <state width="1237" height="281" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1580403003521" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1580580336040">
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1580580899217">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580580336040" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580580899217" />
     <state width="1173" height="216" key="GridCell.Tab.0.right/0.0.1217.720@0.0.1217.720" timestamp="1580490825335" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580396476312" />
     <state width="1237" height="281" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1580403003521" />
@@ -490,10 +490,10 @@
     <state x="116" y="0" key="SettingsEditor/0.0.1217.720@0.0.1217.720" timestamp="1580475939666" />
     <state x="825" y="-1080" key="SettingsEditor/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580383054829" />
     <state x="122" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1580334141809" />
-    <state x="509" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1580578950651">
+    <state x="509" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1580590480656">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="509" y="255" key="com.intellij.ide.util.TipDialog/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580578950651" />
+    <state x="509" y="255" key="com.intellij.ide.util.TipDialog/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580590480656" />
     <state x="339" y="167" key="com.intellij.ide.util.TipDialog/0.0.1280.680/642.-1080.1920.1040@0.0.1280.680" timestamp="1580466195608" />
     <state x="1151" y="-825" key="com.intellij.ide.util.TipDialog/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580575208490" />
     <state x="339" y="167" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1580491240620" />
@@ -519,5 +519,10 @@
     </state>
     <state x="271" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1217.720@0.0.1217.720" timestamp="1580483886237" />
     <state x="1070" y="-1021" width="1061" height="980" key="search.everywhere.popup/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580423655672" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/GestionStock$Test_in_GestionStock.ic" NAME="Test in GestionStock Coverage Results" MODIFIED="1580590497875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Test.*</FILTER>
+    </SUITE>
   </component>
 </project>

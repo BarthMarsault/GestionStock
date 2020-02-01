@@ -39,8 +39,9 @@ public class CreationUtilisateur extends MenuBar {
     }
 
 
-
-
+    /**
+     * Verifie si les conditions de chaque  champs sont respectées puis effectue la création si c'est le cas
+     */
     public void creationUtilisateur(){
         Boolean result = true;
         Utilisateur user;
@@ -94,6 +95,9 @@ public class CreationUtilisateur extends MenuBar {
     }
 
 
+    /**
+     * Change l'affichage lorsque la checkbox ckbAdmin est cocher ou décocher
+     */
     public void checkAdmin(){
         if(ckbAdmin.isSelected()){
             labelRayon.setVisible(false);

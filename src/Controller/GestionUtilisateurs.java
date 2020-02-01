@@ -40,6 +40,7 @@ public class GestionUtilisateurs extends MenuBar{
 
 
 
+        //Bouton de mofification d'un utilisateur
         Callback<TableColumn<Utilisateur, Void>, TableCell<Utilisateur, Void>> modifCellFactory = new Callback<TableColumn<Utilisateur, Void>, TableCell<Utilisateur, Void>>() {
             @Override
             public TableCell<Utilisateur, Void> call(final TableColumn<Utilisateur, Void> param) {
@@ -72,6 +73,7 @@ public class GestionUtilisateurs extends MenuBar{
         colModifUtilisateur.setCellFactory(modifCellFactory);
 
 
+        //Bouton de suppression d'un utilisateur
         Callback<TableColumn<Utilisateur, Void>, TableCell<Utilisateur, Void>> suppressionCellFactory = new Callback<TableColumn<Utilisateur, Void>, TableCell<Utilisateur, Void>>() {
             @Override
             public TableCell<Utilisateur, Void> call(final TableColumn<Utilisateur, Void> param) {

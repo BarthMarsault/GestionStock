@@ -45,6 +45,10 @@ public class ModificationUtilisateur {
     }
 
 
+    /**
+     * Verifie si l'utilisateur à modifier est administrateur et adapte l'affichage en fontion
+     * Modification : Retrait de l'affichage du rayon d'affectaiton
+     */
     public void isAdmin(){
         if(ancienUtilisateur.getClass().getTypeName().equals("Model.Administrateur")){
             cbRayon.setVisible(false);
@@ -60,7 +64,10 @@ public class ModificationUtilisateur {
     }
 
 
-
+    /**
+     * Verifie si les conditions de chaque  champs sont respectées puis effectue la modification
+     * si c'est le cas
+     */
     public void modificationUtilisateur(){
         Boolean result = true;
 
@@ -108,8 +115,6 @@ public class ModificationUtilisateur {
         }
 
     }
-
-
 
 
     public void passUtilisateur(Utilisateur utilisateur){
