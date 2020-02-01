@@ -97,21 +97,21 @@ public class DataStorage {
         //Ajout de rayons
         ArrayList<Article> listeArticles = new ArrayList<>();
         listeArticles.add(new Article("A123", "Paire de chaussures", 34, "Paire de chaussures super confortable."));
-        listeArticles.add(new Article("G578", "Canne à pêche", 22, "Canne à pêche de compétition."));
-        listeArticles.add(new Article("D13", "Tapis de yoga", 34, "Moelleux et léger il convient parfaitement à tout sportif."));
-        Rayon rayon1 = new Rayon("Sport",listeArticles);
+        listeArticles.add(new Article("G578", "Bracelet éponge", 22, "Bracelet qui permet également de faire la vaisselle."));
+        listeArticles.add(new Article("D13", "Semelle de chaussure", 34, "Moelleuse et légère, elle convient parfaitement à tout sportif."));
+        Rayon rayon1 = new Rayon("Course",listeArticles);
         magasin.addRayon(rayon1);
         ArrayList<Article> listeArticles2 = new ArrayList<>();
         listeArticles2.add(new Article("U907", "Cuissard d'hiver", 34, "Cuissard de compétition."));
         listeArticles2.add(new Article("I508", "Casque bleu", 22, "Pour une protection en toute classe."));
-        listeArticles2.add(new Article("F313", "Roue 20 pouces", 34, "Une roue qui se dégonfle en un mois d'utilisation."));
+        listeArticles2.add(new Article("F313", "Roue 20 pouces", 34, "Une roue qui se dégonfle en une utilisation."));
         Rayon rayon2 = new Rayon("Cyclotourisme",listeArticles2);
         magasin.addRayon(rayon2);
 
         //Ajout d'utilisateurs
         magasin.addUtilisateur(new Utilisateur(1,"Dupont","Jean","123",rayon1));
-        magasin.addUtilisateur(new Utilisateur(2,"Duper","Je suis","123", rayon2));
-        magasin.addUtilisateur(new Administrateur(10,"admin","admin","123"));
+        magasin.addUtilisateur(new Utilisateur(2,"Martin","Alexis","123", rayon2));
+        magasin.addUtilisateur(new Administrateur(10,"Admin","Admin","123"));
 
 
 

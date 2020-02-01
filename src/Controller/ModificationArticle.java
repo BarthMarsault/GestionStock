@@ -48,6 +48,9 @@ public class ModificationArticle {
         ancienArticle = article;
     }
 
+    /**
+     * Fonction : Initialise le contenu de fenêtre de modification d'un article
+     */
     @FXML
     public void initialize(){
 
@@ -61,6 +64,9 @@ public class ModificationArticle {
 
     }
 
+    /**
+     * Fonction : Récupère l'article sélectionné et initialise le contenu de fenêtre de modification de l'article
+     */
     public void passArticle(Article article){
         if(article != null) {
             ancienArticle = article;
@@ -75,6 +81,9 @@ public class ModificationArticle {
         }
     }
 
+    /**
+     * Fonction : Récupère les champs de la fenêtre et modifie l'article
+     */
     public void modificationArticle(){
         if(!nomArticleTxtField.getText().equals("") && !refArticleTxtField.getText().equals("") && !qteArticleTxtField.getText().equals("") && rayonArticleComboBox.getValue() != null){
             if (ancienArticle.getReference().equals(refArticleTxtField.getText()) || DataStorage.magasin.getArticleFromReference(refArticleTxtField.getText()) == null) {
