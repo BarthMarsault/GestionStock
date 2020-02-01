@@ -11,6 +11,8 @@ import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
 
+import static Utils.Consts.USER_SESSION;
+
 public class CreationArticle extends MenuBar{
 
 
@@ -48,7 +50,9 @@ public class CreationArticle extends MenuBar{
         rayonArticleComboBox.getItems().clear();
         ArrayList<String> listeNomRayon = new ArrayList<>();
         for(Rayon rayon : DataStorage.magasin.getListeRayons()){
-            if(Consts.USER_SESSION.getRayon().equals(rayon))
+            if(USER_SESSION.getClass().getTypeName() == "Model.Administrateur")
+                listeNomRayon.add(rayon.getNom());
+            else if(USER_SESSION.getRayon().equals(rayon))
                 listeNomRayon.add(rayon.getNom());
         }
         rayonArticleComboBox.getItems().addAll(listeNomRayon);
