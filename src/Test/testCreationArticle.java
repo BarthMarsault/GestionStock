@@ -123,7 +123,7 @@ public class testCreationArticle {
     void when_trying_to_add_article_with_reference_already_exists_warning_appears(FxRobot robot){
         //When :
         nomArticleTxtField.setText("Mauvaises chaussures");
-        refArticleTxtField.setText("A123");
+        refArticleTxtField.setText(DataStorage.magasin.getListeRayons().get(0).getListeArticles().get(0).getReference());
         qteArticleTxtField.setText("42");
         rayonArticleComboBox.setValue("Sport");
         creationArticle.creationArticle();

@@ -32,6 +32,9 @@ public class ConsultationArticles extends MenuBar {
 
     ObservableList<Article> data = FXCollections.observableArrayList();
 
+    /**
+     * Fonction : Initialise le contenu de fenêtre de consultation des articles
+     */
     @FXML
     public void initialize(){
         super.initialize();
@@ -45,6 +48,8 @@ public class ConsultationArticles extends MenuBar {
         //qteArticleColumn.setCellValueFactory(cellData->new SimpleStringProperty(Integer.toString(cellData.getValue().getQte())));
         rayonArticleColumn.setCellValueFactory(cellData->new SimpleStringProperty(DataStorage.magasin.getRayonFromArticle(cellData.getValue()).getNom()));
 
+        //Pour chaque article les focntionnalités suivantes ajoutent les boutons d'augmentation/diminution de la quantité,
+        //d'accès au détails, de modification et de suppression selon les droits d'accès de l'utilisateur.
 
         Callback<TableColumn<Article, Void>, TableCell<Article, Void>> qteCellFactory = new Callback<TableColumn<Article, Void>, TableCell<Article, Void>>() {
             @Override

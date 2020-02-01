@@ -32,7 +32,7 @@ public class UserConnexion extends MenuBar {
 
 
         Utilisateur utilisateur = null;
-        if(txtId.getText() != ""){
+        if(!txtId.getText().equals("")){
             utilisateur = magasin.getUtilisateurById(Integer.parseInt(txtId.getText()));
         }
 

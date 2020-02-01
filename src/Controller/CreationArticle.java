@@ -39,17 +39,18 @@ public class CreationArticle extends MenuBar{
         this.msgInformation = msgInformation;
     }
 
+    /**
+     * Fonction : Initialise le contenu de fenêtre de création des articles
+     */
     @FXML
     public void initialize(){
         super.initialize();
         rayonArticleComboBox.getItems().clear();
-        ArrayList<Rayon> listeRayon = DataStorage.magasin.getListeRayons();
         ArrayList<String> listeNomRayon = new ArrayList<>();
-        for(Rayon rayon : listeRayon){
+        for(Rayon rayon : DataStorage.magasin.getListeRayons()){
             if(Consts.USER_SESSION.getRayon().equals(rayon))
                 listeNomRayon.add(rayon.getNom());
         }
-
         rayonArticleComboBox.getItems().addAll(listeNomRayon);
         msgInformation.setVisible(false);
         FiledFormater.noSpecialCharacters(nomArticleTxtField);
@@ -57,6 +58,9 @@ public class CreationArticle extends MenuBar{
         FiledFormater.onlyNumbers(qteArticleTxtField);
     }
 
+    /**
+     * Fonction : Récupère le contenu des champs de la fenêtre et ajoute l'article dans le magasin.
+     */
     public void creationArticle(){
         if(!refArticleTxtField.getText().equals("") && !nomArticleTxtField.getText().equals("") && !qteArticleTxtField.getText().equals("") && rayonArticleComboBox.getValue() != null) {
             if (DataStorage.magasin.getArticleFromReference(refArticleTxtField.getText()) == null){

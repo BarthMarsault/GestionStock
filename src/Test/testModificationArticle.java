@@ -25,7 +25,6 @@ public class testModificationArticle {
     private ComboBox<String> rayonArticleComboBox;
     private TextArea descArticleTxtArea;
     private Label msgInformationLabel;
-    private Button validerBtn;
     private Article avantModifArticle;
     private Article apresModifArticle;
 
@@ -45,10 +44,6 @@ public class testModificationArticle {
         FiledFormater.noSpecialCharacters(refArticleTxtField);
         FiledFormater.onlyNumbers(qteArticleTxtField);
         modificationArticle = new ModificationArticle(refArticleTxtField, nomArticleTxtField, qteArticleTxtField, rayonArticleComboBox, descArticleTxtArea, msgInformationLabel, avantModifArticle);
-        validerBtn = new Button("Valider");
-        validerBtn.setOnAction(actionEvent -> modificationArticle.modificationArticle());
-        stage.setScene(new Scene(new StackPane(validerBtn), 100, 100));
-        stage.show();
     }
 
     @Test
@@ -58,7 +53,7 @@ public class testModificationArticle {
         refArticleTxtField.setText("");
         qteArticleTxtField.setText("");
         rayonArticleComboBox.setValue("");
-        robot.clickOn(".button");
+        modificationArticle.modificationArticle();
         //Then :
         //Un message d'avertissement apparaît
         Assertions.assertThat(msgInformationLabel).hasText("Veuillez remplir tous les champs.");
@@ -133,7 +128,7 @@ public class testModificationArticle {
     void when_trying_to_modify_article_with_reference_already_exists_warning_appears(FxRobot robot){
         //When :
         nomArticleTxtField.setText("Mauvaises chaussures");
-        refArticleTxtField.setText("D13");
+        refArticleTxtField.setText(DataStorage.magasin.getListeRayons().get(1).getListeArticles().get(0).getReference());
         qteArticleTxtField.setText("42");
         rayonArticleComboBox.setValue("Sport");
         modificationArticle.modificationArticle();

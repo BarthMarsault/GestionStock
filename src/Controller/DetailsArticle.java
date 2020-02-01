@@ -23,6 +23,9 @@ public class DetailsArticle{
     public void initialize(){
     }
 
+    /**
+     * Fonction : Récupère l'article sélectionné et initialise le contenu de fenêtre de détails de l'article
+     */
     public void passArticle(Article article){
         if(article != null){
             nomArticleTxtField.setText(article.getNom());
@@ -33,6 +36,9 @@ public class DetailsArticle{
         }
     }
 
+    /**
+     * Fonction : Retourner à la fenêtre de consultation des articles
+     */
     public void retour(){
         ViewLauncher launcher = new ViewLauncher(aPane,"ConsultationArticles",APPLICATION_NAME);
         launcher.launch();
