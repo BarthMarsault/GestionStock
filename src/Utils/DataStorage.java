@@ -105,7 +105,7 @@ public class DataStorage {
         listeArticles2.add(new Article("U907", "Cuissard d'hiver", 34, "Cuissard de compétition."));
         listeArticles2.add(new Article("I508", "Casque bleu", 22, "Pour une protection en toute classe."));
         listeArticles2.add(new Article("F313", "Roue 20 pouces", 34, "Une roue qui se dégonfle en un mois d'utilisation."));
-        Rayon rayon2 = new Rayon("Cyclotourisme",listeArticles);
+        Rayon rayon2 = new Rayon("Cyclotourisme",listeArticles2);
         magasin.addRayon(rayon2);
 
         //Ajout d'utilisateurs

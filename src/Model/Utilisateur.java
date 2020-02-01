@@ -91,7 +91,6 @@ public class Utilisateur implements Serializable {
     }
 
 
-
     public Rayon getRayon(){
         return rayon;
     }
