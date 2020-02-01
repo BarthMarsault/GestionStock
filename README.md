@@ -1,6 +1,6 @@
 # GestionStock
 
 
-Pour fonctionner, le projet Gestion Stock à besoin des librairies présentes dans le dosseir /lib.
+Pour fonctionner, le projet Gestion Stock à besoin des librairies présentent dans le dossier /lib.
 
  

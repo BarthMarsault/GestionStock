@@ -142,7 +142,7 @@
       <recent name="C:\Users\PYL\Documents\GitHub\GestionStock\src\View" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.Test in GestionStock">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -381,7 +381,7 @@
       <workItem from="1580490523210" duration="847000" />
       <workItem from="1580575209845" duration="1423000" />
       <workItem from="1580578932770" duration="2581000" />
-      <workItem from="1580590469152" duration="1567000" />
+      <workItem from="1580590469152" duration="1601000" />
     </task>
     <servers />
   </component>
@@ -444,31 +444,31 @@
     <state x="401" y="88" key="FileChooserDialogImpl/0.0.1217.720@0.0.1217.720" timestamp="1580583674777" />
     <state x="1275" y="-953" key="FileChooserDialogImpl/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580466451948" />
     <state x="422" y="83" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1580334302158" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1580591671731">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1580592095757">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580591671731" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580592095757" />
     <state width="1173" height="99" key="GridCell.Tab.0.bottom/0.0.1217.720@0.0.1217.720" timestamp="1580590660769" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580396476312" />
     <state width="1237" height="281" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1580403003521" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1580591671731">
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1580592095757">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580591671731" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580592095757" />
     <state width="1173" height="99" key="GridCell.Tab.0.center/0.0.1217.720@0.0.1217.720" timestamp="1580590660769" />
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580396476312" />
     <state width="1237" height="281" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1580403003521" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1580591671731">
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1580592095756">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580591671731" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580592095756" />
     <state width="1173" height="99" key="GridCell.Tab.0.left/0.0.1217.720@0.0.1217.720" timestamp="1580590660769" />
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580396476312" />
     <state width="1237" height="281" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1580403003521" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1580591671731">
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1580592095757">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580591671731" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/-641.1080.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1580592095757" />
     <state width="1173" height="99" key="GridCell.Tab.0.right/0.0.1217.720@0.0.1217.720" timestamp="1580590660769" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580396476312" />
     <state width="1237" height="281" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1580403003521" />
@@ -526,7 +526,7 @@
     <state x="1070" y="-1021" width="1061" height="980" key="search.everywhere.popup/0.0.1280.680/642.-1080.1920.1040@642.-1080.1920.1040" timestamp="1580423655672" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/GestionStock$Test_in_GestionStock.ic" NAME="Test in GestionStock Coverage Results" MODIFIED="1580590497875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/GestionStock$Test_in_GestionStock.ic" NAME="Test in GestionStock Coverage Results" MODIFIED="1580592095640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Test.*</FILTER>
     </SUITE>
   </component>
