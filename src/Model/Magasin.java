@@ -1,7 +1,10 @@
 package Model;
 
+import Utils.Log;
+
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 public class Magasin implements Serializable {
     private ArrayList<Utilisateur> listeUtilisateurs;
@@ -32,11 +35,34 @@ public class Magasin implements Serializable {
         return null;
     }
 
+
+    /***
+     * Retourne l'ID disponible pour un utilisateur
+     * @return int - ID
+     */
+    public int getLastIdUtilisateur(){
+        int lastId = 1;
+        for(Utilisateur utilisateur : listeUtilisateurs){
+            if(utilisateur.getId() > lastId) {
+                lastId = utilisateur.getId();
+            }
+        }
+        return lastId + 1;
+    }
+
     public void addUtilisateur(Utilisateur utilisateur){
         if(!listeUtilisateurs.contains(utilisateur) && utilisateur != null){
             listeUtilisateurs.add(utilisateur);
         }
 
+    }
+
+    public void deleteUtilisateur(Utilisateur utilisateur){
+        try{
+            listeUtilisateurs.remove(utilisateur);
+        }catch(Exception ex){
+            Log.logError(ex);
+        }
     }
 
     public void addRayon(Rayon rayon){

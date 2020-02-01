@@ -33,11 +33,20 @@ public class ModificationUtilisateur {
     @FXML Label labelRayon;
     @FXML ComboBox<Rayon> cbRayon;
 
+    ObservableList<Rayon> listeRayons = FXCollections.observableArrayList();
+
+
 
     public void initialize(){
         msgInformation.setVisible(false);
+        listeRayons = FXCollections.observableArrayList(magasin.getListeRayons());
+        cbRayon.setItems(listeRayons);
 
-        if(ancienUtilisateur.getClass().equals("Model.Administrateur")){
+    }
+
+
+    public void isAdmin(){
+        if(ancienUtilisateur.getClass().getTypeName().equals("Model.Administrateur")){
             cbRayon.setVisible(false);
             labelRayon.setVisible(false);
         }else{
@@ -91,10 +100,10 @@ public class ModificationUtilisateur {
 
 
         if(result){
-//            ancienUtilisateur.setNom(txtNom.getText());
-//            ancienUtilisateur.setPrenom(txtPrenom.getText());
-//            ancienUtilisateur.setMdp(txtMdp.getText());
-//            ancienUtilisateur.setRayon(cbRayon.getValue());
+            ancienUtilisateur.setNom(txtNom.getText());
+            ancienUtilisateur.setPrenom(txtPrenom.getText());
+            ancienUtilisateur.setMdp(txtMdp.getText());
+            ancienUtilisateur.setRayon(cbRayon.getValue());
             annuler();
         }
 
@@ -106,11 +115,13 @@ public class ModificationUtilisateur {
     public void passUtilisateur(Utilisateur utilisateur){
         if(utilisateur != null) {
             ancienUtilisateur = utilisateur;
+            isAdmin();
             txtId.setText(Integer.toString(utilisateur.getId()));
             txtNom.setText(utilisateur.getNom());
             txtPrenom.setText(utilisateur.getPrenom());
             txtMdp.setText(utilisateur.getMdp());
             cbRayon.getSelectionModel().select(utilisateur.getRayon());
+
         }
     }
 

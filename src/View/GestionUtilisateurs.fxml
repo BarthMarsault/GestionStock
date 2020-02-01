@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane fx:id="bPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GestionUtilisateurs">
+<BorderPane fx:id="bPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GestionUtilisateurs">
    <top>
       <GridPane BorderPane.alignment="CENTER">
          <columnConstraints>
@@ -53,7 +53,7 @@
         <columns>
           <TableColumn fx:id="colPrenomUtilisateur" prefWidth="137.99997556209564" text="Prenom" />
           <TableColumn fx:id="colNomUtilisateur" prefWidth="145.99996948242188" text="Nom" />
-            <TableColumn fx:id="colModifUtilisateur" prefWidth="118.0" />
+            <TableColumn fx:id="colModifUtilisateur" prefWidth="76.0" />
             <TableColumn fx:id="colSupprUtilisateur" prefWidth="114.80001831054688" />
         </columns>
       </TableView>

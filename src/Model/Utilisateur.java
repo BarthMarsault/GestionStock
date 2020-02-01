@@ -1,8 +1,10 @@
 package Model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 import static Utils.DataStorage.magasin;
+
 
 public class Utilisateur implements Serializable {
 
@@ -23,7 +25,7 @@ public class Utilisateur implements Serializable {
     }
 
     public Utilisateur(String nom, String prenom, String mdp, Rayon rayon) {
-        this.id = generationIdentifiant();
+        this.id = magasin.getLastIdUtilisateur();
         this.nom = nom;
         this.prenom = prenom;
         setMdp(mdp);
@@ -31,7 +33,7 @@ public class Utilisateur implements Serializable {
     }
 
     public Utilisateur() {
-        this.id = generationIdentifiant();
+        this.id = magasin.getLastIdUtilisateur();
     }
 
     @Override
@@ -39,11 +41,6 @@ public class Utilisateur implements Serializable {
         return prenom + " " + nom;
     }
 
-
-
-    public int generationIdentifiant(){
-        return  (int) (Math.random() * (999999));
-    }
 
     public int getId() {
         return id;
@@ -93,16 +90,10 @@ public class Utilisateur implements Serializable {
         return false;
     }
 
-    public boolean validationMdp(String mdp) {
-        if (mdp.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)([-+!*$@%_\\w]{6,20})$")) {
-            return true;
-        }
-        return false;
-    }
 
 
     public Rayon getRayon(){
-      return rayon;
+        return rayon;
     }
 
     public void setRayon(Rayon rayon){

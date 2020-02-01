@@ -5,7 +5,6 @@ import Model.Rayon;
 import Utils.Consts;
 import Utils.DataStorage;
 import Utils.ViewLauncher;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -13,7 +12,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.util.Callback;
 import java.util.ArrayList;
 

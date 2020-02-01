@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane fx:id="bPane" prefHeight="322.0" prefWidth="537.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ConsultationArticles">
+<BorderPane fx:id="bPane" prefHeight="322.0" prefWidth="537.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ConsultationArticles">
    <center>
       <GridPane prefHeight="254.0" prefWidth="293.3333333333333" BorderPane.alignment="CENTER">
         <columnConstraints>

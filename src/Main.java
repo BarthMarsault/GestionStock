@@ -21,13 +21,15 @@ public class Main extends Application {
     public static void main(String[] args) {
         DataStorage.deserializeData();
 
-        ArrayList<Utilisateur> u = DataStorage.magasin.getListeUtilisateurs();
-        for(Utilisateur ut : u){
-            System.out.println(ut.toString());
-        }
+
 
 
         launch(args);
+
+        ArrayList<Utilisateur> u = DataStorage.magasin.getListeUtilisateurs();
+        for(Utilisateur ut : u){
+            System.out.println(ut.getId() + " - " + ut.toString());
+        }
         DataStorage.serializeData();
     }
 }
