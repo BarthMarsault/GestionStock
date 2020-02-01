@@ -73,12 +73,21 @@ public class Magasin implements Serializable {
         }
     }
 
+    /**
+     * Ajoute un Rayon dans le magasin
+     * @param rayon
+     */
     public void addRayon(Rayon rayon){
         if(!listeRayons.contains(rayon) && rayon != null){
             listeRayons.add(rayon);
         }
     }
 
+    /**
+     *Retourne le rayon auquel est affecté l'article passé en paramètre
+     * @param article
+     * @return
+     */
     public Rayon getRayonFromArticle(Article article){
         for(Rayon r : listeRayons){
             for(Article ar : r.getListeArticles()) {
@@ -90,6 +99,11 @@ public class Magasin implements Serializable {
         return null;
     }
 
+    /**
+     * Retourne l'article possèdant la référence passé en paramètre
+     * @param reference
+     * @return
+     */
     public Article getArticleFromReference(String reference){
         for(Rayon r : listeRayons){
             for(Article ar : r.getListeArticles())

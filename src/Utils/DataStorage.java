@@ -108,10 +108,13 @@ public class DataStorage {
         Rayon rayon2 = new Rayon("Cyclotourisme",listeArticles2);
         magasin.addRayon(rayon2);
 
+        //Ajout d'un administrateur
+        magasin.addUtilisateur(new Administrateur(1,"Admin","Admin","123"));
         //Ajout d'utilisateurs
-        magasin.addUtilisateur(new Utilisateur(1,"Dupont","Jean","123",rayon1));
-        magasin.addUtilisateur(new Utilisateur(2,"Martin","Alexis","123", rayon2));
-        magasin.addUtilisateur(new Administrateur(10,"Admin","Admin","123"));
+        magasin.addUtilisateur(new Utilisateur(2,"Dupont","Jean","123",rayon1));
+        magasin.addUtilisateur(new Utilisateur(3,"Martin","Alexis","123", rayon2));
+        magasin.addUtilisateur(new Utilisateur(4,"Morin","Clément","123", rayon1));
+
 
 
 
