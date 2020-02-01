@@ -41,7 +41,7 @@ public class Magasin implements Serializable {
      * @return int - ID
      */
     public int getLastIdUtilisateur(){
-        int lastId = 1;
+        int lastId = 0;
         for(Utilisateur utilisateur : listeUtilisateurs){
             if(utilisateur.getId() > lastId) {
                 lastId = utilisateur.getId();
